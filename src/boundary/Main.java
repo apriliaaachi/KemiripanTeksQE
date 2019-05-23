@@ -21,7 +21,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         
         DocumentParser dp = new DocumentParser();
-        dp.parseFiles("data"); 
+        dp.parseFiles("coba"); 
         dp.tfIdfCalculator();
         
         Thesaurus ts = new Thesaurus(dp.getTermsDocsArray(), dp.getAllTerms());
@@ -30,7 +30,7 @@ public class Main {
         ts.tfIdfPairsTermCalculator();
         ts.clusterWeight();
         
-        dp.parseFilesU("dataUji");
+        dp.parseFilesU("cobauji");
         dp.tfidfQueryCalculator();
         dp.getCosineSimilarity(); //calculates cosine similarity  
     }

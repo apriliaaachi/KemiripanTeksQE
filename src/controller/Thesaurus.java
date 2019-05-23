@@ -204,7 +204,7 @@ public class Thesaurus {
         //untuk validasii hasil clusterWeight yang nilainya diatas 0.5
         for (int i=0; i<allPairsTerms.size(); i++){ 
             if (clusterWeight.get(i) > 0.5 && !clusterWeight.get(i).isInfinite()){
-               // System.out.println(clusterWeight.get(i));
+                System.out.println(clusterWeight.get(i));
                 validPairTerm.add(allPairsTerms.get(i));
             } 
         }  

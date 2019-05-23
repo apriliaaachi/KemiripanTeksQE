@@ -1,0 +1,4 @@
+Data 1       : algoritma pemrograman adalah sebuah pengetahuan dan materi yang harus dikuasai oleh semua mahasiswa pada jurusan teknik informatika 
+Data 2       : melihat keadaan tersebut perlu diadakannya sebuah penyesuaian pada sistem pembelajaran yang dapat membuat mahasiswa memiliki motivasi
+Data 3       : dalam jurnal gamification toward a definition menjelaskan lima tingkat unsur game design yang diperlukan dalam sebuah gamifikasi 
+Data 4       : pada proses implementasi gamifikasi perlu dilakukan sebuah penyesuaian terhadap pembelajaran algoritma pemrograman

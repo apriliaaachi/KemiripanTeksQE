@@ -27,7 +27,8 @@ public class DocumentParser {
     private List <String[]> termsDocsArrayU = new ArrayList<>();
     private List <String> allTerms = new ArrayList<>(); //to hold all terms
     private List <double[]> tfidfDocsVector = new ArrayList<>();
-    private List <double[]> idfSave = new ArrayList<>();
+    private List <Double> idfSave = new ArrayList<>();
+    private List <double[]> tfidfDocsVectorQuery = new ArrayList<>();
 
     /**
      * Method to read files and store in array.
@@ -50,7 +51,7 @@ public class DocumentParser {
                 }
                 String[] tokenizedTerms = sb.toString().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
                 List <String> listTermDoc = new ArrayList<String>(Arrays.asList(tokenizedTerms));
-                listTermDoc.removeAll(Arrays.asList(kamus.readStopWord()));  //stopword pada TermDoc
+                listTermDoc.removeAll(kamus.readStopWord());  //stopword pada TermDoc
                     
                 for (String stemm : listTermDoc){
                     Stemming st = new Stemming(); //Stemm
@@ -91,7 +92,7 @@ public class DocumentParser {
                 while ((s = in.readLine()) != null) {
                     sb.append(s);
                 }
-                String[] tokenizedTerms = getExpansionTerm(sb.toString()).replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
+                String[] tokenizedTerms = sb.toString().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
                 List <String> listTermDoc = new ArrayList<String>(Arrays.asList(tokenizedTerms));
                 listTermDoc.removeAll(Arrays.asList(kamus.readStopWord()));  //stopword pada TermDoc
                     
@@ -115,7 +116,7 @@ public class DocumentParser {
      */
     public void tfIdfCalculator() {
         double tf; //term frequency
-        double idf; //inverse document frequency
+        double idf = 0; //inverse document frequency
         double tfidf; //term requency inverse document frequency        
         for (String[] docTermsArray : termsDocsArray) {
             double[] tfidfvectors = new double[allTerms.size()];
@@ -126,10 +127,12 @@ public class DocumentParser {
                 tfidf = tf * idf;
                 tfidfvectors[count] = tfidf;
                 
+                idfSave.add(idf);
                 count++;
             }
 
-            tfidfDocsVector.add(tfidfvectors);  //string document vectors;    
+            tfidfDocsVector.add(tfidfvectors);  //string document vectors;  
+            
  
         }
         
@@ -141,6 +144,8 @@ public class DocumentParser {
                 //System.out.print(sum[j]);
             }
         }
+        
+        System.out.println("idf " + idfSave.size());
         
         
     }
@@ -155,19 +160,19 @@ public class DocumentParser {
             int count = 0;
             for (String terms : allTerms) {
                 tf = new PembobotanTFIDF().tfCalculator(docTermsArray, terms);
-                tfidf = tf;
+                tfidf = tf * idfSave.get(count);
                 tfidfvectors[count] = tfidf;
                 
                 count++;
             }
   
-            idfSave.add(tfidfvectors);  //string document vectors;    
+            tfidfDocsVectorQuery.add(tfidfvectors);  //string document vectors;    
     
         }
         
-        for (int i = 0; i < idfSave.size(); i++) {
-            System.out.println(idfSave.get(i).length);
-            for (int j = 0; j < idfSave.get(i).length; j++) {
+        for (int i = 0; i < tfidfDocsVectorQuery.size(); i++) {
+            System.out.println(tfidfDocsVectorQuery.get(i).length);
+            for (int j = 0; j < tfidfDocsVectorQuery.get(i).length; j++) {
                 //System.out.print(idfSave.get(i)[j]);
             }
             //System.out.println("");
@@ -176,12 +181,12 @@ public class DocumentParser {
     }
     
     public void getCosineSimilarity() {
-        for (int i = 0; i < idfSave.size(); i++) {
+        for (int i = 0; i < tfidfDocsVectorQuery.size(); i++) {
             for (int j = 0; j < tfidfDocsVector.size(); j++) {
                 System.out.println("between " + i + " and " + j + "  =  "
                     + new CosineSimilarity().cosineSimilarity
                     (
-                       idfSave.get(i), 
+                       tfidfDocsVectorQuery.get(i), 
                        tfidfDocsVector.get(j)
                     )
                 );
