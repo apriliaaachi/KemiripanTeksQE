@@ -116,7 +116,7 @@ public class DocumentParser {
                 
                 String joinTerm = String.join(" ", hasilStemm);
                 System.out.println(getExpansionTerm(joinTerm));
-                String[] termDocAfterStopWord = joinTerm.split("\\W+");
+                String[] termDocAfterStopWord = getExpansionTerm(joinTerm).split("\\W+");
                 
                 termsDocsArrayU.add(termDocAfterStopWord); //token yang sudah dipraproses masuk ke termsDocArrays
                 hasilStemm.clear();

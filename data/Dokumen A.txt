@@ -10,7 +10,8 @@ Namun deteksi manual sangat tidak efektif jika diterapkan pada dokumen dalam jum
 Sebuah perangkat lunak deteksi plagiarisme dapat dikembangkan untuk mengatasi masalah ini dengan menerapkannya pada bahasa tertentu. 
 Beberapa penelitian telah dilakukan untuk mengembangkan perangkat lunak deteksi plagiarisme untuk beberapa negara di Eropa, contohnya seperti pada bahasa Inggris atau Prancis. 
 Sedangkan untuk negara di Asia Tenggara masih sangat dikit, seperti untuk Bahasa Indonesia. 
-Maka dari itu pada penelitian ini perangkat lunak yang dibuat khusus untuk bahasa Indonesia Beberapa metode untuk perangkat lunak deteksi plagiarisme telah dikembangkan dengan berbagai  pendekatan, akurasi dan waktu proses yang beragam. 
+Maka dari itu pada penelitian ini perangkat lunak yang dibuat khusus untuk bahasa Indonesia. 
+Beberapa metode untuk perangkat lunak deteksi plagiarisme telah dikembangkan dengan berbagai  pendekatan, akurasi dan waktu proses yang beragam. 
 Perangkat lunak deteksi plagiarisme harus bekerja sampai ke tingkat dokumen, tidak hanya sebatas singkat kalimat. 
 Beberapa metode yang bekerja pada tingkat Levenshtein Distance dan Smith Waterman, Graph based, Rabin Karp, dan pada tingkat dokumen yaitu MinHash and Word Positional Based Approach for Document Selection. 
 Dari penelitian yang dijabarkan diatas, hanya Graph based dan Rabin Karp yang menerapkan stemming untuk bahasa Inggris, hasil penelitian menunjukkan penerapan stemming akan meningkatkan akurasi metode pencocokan string. 

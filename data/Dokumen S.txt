@@ -2,7 +2,8 @@ Penjadwalan kuliah merupakan hal yang sangat penting bagi kelancaran proses bela
 Aspek mahasiswa, ada atau tidaknya jadwal mata kuliah yang beririsan. 
 Selain itu, perlu diperhatikan juga dari aspek ketersediaan ruang belajar, pemerataan beban kuliah bagi mahasiswa setiap harinya dan juga beban mengajar dosen. 
 Banyak aspek yang harus dipertimbangkan untuk memperoleh jadwal yang baik, dan seringkali tidak dapat memuaskan karena tidak semua kebutuhan terpenuhi. 
-Oleh karena itu, perlu adanya penetapan suatu batasan dalam penyusunan jadwal yang bersifat harus terpenuhi (hard constraints) dan tidak harus Terpenuhi (soft constraints) namun tetap menjadi acuan dalam proses pembuatan jadwal.Berdasarkan aspek aspek tersebut maka dibutuhkan suatu metode optimasi penjadwalan kuliah untuk memaksimalkan kegiatan belajar mengajar. 
+Oleh karena itu, perlu adanya penetapan suatu batasan dalam penyusunan jadwal yang bersifat harus terpenuhi (hard constraints) dan tidak harus Terpenuhi (soft constraints) namun tetap menjadi acuan dalam proses pembuatan jadwal. 
+Berdasarkan aspek aspek tersebut maka dibutuhkan suatu metode optimasi penjadwalan kuliah untuk memaksimalkan kegiatan belajar mengajar. 
 Secara umum, penyelesaian masalah optimasi dapat dilakukan dengan menggunakan dua metode. 
 yaitu metode konvensional dan metode heuristik. 
 Metode konvensional diterapkan dengan perhitungan matematis biasa, sedangkan metode heuristik diterapkan dengan perhitungan kecerdasan buatan. 
