@@ -49,13 +49,23 @@ public class DocumentParser {
                 while ((s = in.readLine()) != null) {
                     sb.append(s);
                 }
-                String[] tokenizedTerms = sb.toString().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
+                
+                System.out.println(sb.toString());
+                
+                String[] tokenizedTerms = sb.toString().toLowerCase().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
                 List <String> listTermDoc = new ArrayList<String>(Arrays.asList(tokenizedTerms));
                 listTermDoc.removeAll(kamus.readStopWord());  //stopword pada TermDoc
                     
                 for (String stemm : listTermDoc){
                     Stemming st = new Stemming(); //Stemm
+                    
+                    System.out.println(stemm);
+                    
                     stemm = st.kataDasar(stemm);
+                    
+                    System.out.println(stemm);
+                    System.out.println("sukses");
+                    
                     hasilStemm.add(stemm);
                        
                     if(!allTerms.contains(stemm)){ //menghindari duplikat entri. untuk mendapatkan seluruh term pada dokumen
@@ -92,20 +102,30 @@ public class DocumentParser {
                 while ((s = in.readLine()) != null) {
                     sb.append(s);
                 }
-                String[] tokenizedTerms = sb.toString().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
+                
+                String[] tokenizedTerms = sb.toString().toLowerCase().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
                 List <String> listTermDoc = new ArrayList<String>(Arrays.asList(tokenizedTerms));
-                listTermDoc.removeAll(Arrays.asList(kamus.readStopWord()));  //stopword pada TermDoc
+                listTermDoc.removeAll(kamus.readStopWord());  //stopword pada TermDoc
                     
                 for (String stemm : listTermDoc){
                     Stemming st = new Stemming(); //Stemm
                     stemm = st.kataDasar(stemm);
                     hasilStemm.add(stemm);
 
-                }                
-                String[] termDocAfterStopWord = hasilStemm.toArray(new String[0]);
+                }  
+                
+                String joinTerm = String.join(" ", hasilStemm);
+                System.out.println(getExpansionTerm(joinTerm));
+                String[] termDocAfterStopWord = joinTerm.split("\\W+");
                 
                 termsDocsArrayU.add(termDocAfterStopWord); //token yang sudah dipraproses masuk ke termsDocArrays
                 hasilStemm.clear();
+            }
+        }
+        
+        for (int i = 0; i < termsDocsArrayU.size(); i++) {
+            for (int j = 0; j < termsDocsArrayU.get(i).length; j++) {
+                System.out.println(termsDocsArrayU.get(i)[j]);
             }
         }
 
@@ -163,6 +183,8 @@ public class DocumentParser {
                 tfidf = tf * idfSave.get(count);
                 tfidfvectors[count] = tfidf;
                 
+                System.out.println("tf*idf : " + tf +"*"+ idfSave.get(count) +" = " + tfidf );
+                
                 count++;
             }
   
@@ -212,9 +234,13 @@ public class DocumentParser {
         }
         
         //get expand term
+        
+        System.out.println(keyword);
+        
         String kata[] = keyword.split(" ");
         for(String w : kata){
             expandKata.add(w);
+            System.out.println("expanda kata : " + w);
             for(String[] ss : bacaThesaurus){
                 String kata1 = ss[0];
                 String kata2 = ss[1];
@@ -224,7 +250,8 @@ public class DocumentParser {
                 }
             }
         }
-        expandKata = new ArrayList<String>(new LinkedHashSet<String>(expandKata));
+        
+        //expandKata = new ArrayList<String>(new LinkedHashSet<String>(expandKata));
         String expandTerms = String.join(" ",expandKata); //ubah list jd string
         return expandTerms;
    }

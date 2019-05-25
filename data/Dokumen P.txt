@@ -1,0 +1,15 @@
+Bahasa pemrograman adalah bahasa tingkat tinggi yang dapat dimengerti oleh manusia yang dapat diubah menjadi bahasa mesin oleh compiler sehingga komputer dapat menjalankan apa yang ditulis dengan menggunakan bahasa pemrograman, ada banyak bahasa pemrograman, tapi yang sering dipelajari dan digunakan adalah C atau C ++ karena untuk proses belajar yang lebih baik menggunakan bahasa ini. 
+Dalam perkembangannya ada banyak bahasa baru yang muncul dan menekankan keunggulan mereka, salah satunya adalah bahasa pemrograman Python, yang menekankan pada kemudahan penggunaan karena lebih mudah dipahami oleh manusia, sehingga dalam penggunaannya akan dapat mengurangi kesalahan yang dibuat oleh manusia. 
+Source to Source translation adalah proses untuk menerjemahkan bahasa pemrograman ke bahasa pemrograman lain. 
+Source to Source translation dari satu Bahasa Tingkat Tinggi ke bahasa lain dapat memberikan sedikit bantuan dalam banyak kasus didalam pemrograman, diantaranya untuk membuat perangkat lunak yang lebih murah dan andal. 
+Namun, teknik yang baik untuk proses translasi ini belum terealisasi. 
+ini adalah tantangan untuk membuat aplikasi atau software untuk menerjemahkan bahasa pemrograman tingkat tinggi ke Bahasa tingkat tinggi yang lain. 
+Software untuk menerjemahkan kode dari satu bahasa ke bahasa lain sering di butuhkan di dalam dunia industri Ada berbagai alasan yang melatarbelakangi Source to Source translation antara lain, perubahan dalam proses bisnis, integrasi, peraturan perusahaan, adaptasi teknologi baru, hardware, dan lain sebagainya proses konversi kode tidaklah mudah, terutama jika kode sumber aplikasi yang akan diterjemahkan kompleks dan memiliki ukuran yang besar. 
+Proses konversi akan menghabiskan banyak waktu dan sumber daya, dan rawan kesalahan. 
+Dalam penelitian ini, objek yang akan diterjemahkan adalah bahasa pemrograman terutama bahasa Pemrograman tingkat tinggi. 
+Menurut Adam integrasi Antara aturan dalam bahasa masukan dan aturan dalam bahasa keluaran penting, untuk mendapatkan hasil yang lebih baik. 
+Aturan yang terintegrasi di kedua bahasa tingkat tinggi dapat diterapkan dalam Rule Based Machine Translation untuk di terapkan di dalam Source to Source Translation. 
+Kebanyakan mahasiswa lebih mengenal bahasa C++ dalam membuat program karena bahasa C++ banyak digunakan dosen sebagai bahasa pemrograman dalam mengajarkan pemrograman, tetapi mahasiswa justru lebih memilih bahasa pemrograman Python dibandingkan dengan bahasa C++. 
+Alasan lain untuk memilih C++ sebagai bahasa input dan python sebagai output dalam penelitian ini adalah bahasa python adalah bahasa yang sederhana, baik itu dari segi Sintaks ataupun struktur data yang memungkinkan pengguna untuk membuat kode program lebih singkat dibandingkan dengan C++. 
+Beberapa paradigma dari Python juga memungkinkan pengguna mempunyai kesempatan untuk mempelajari berbagai fitur bahasa pemrograman. 
+Oleh karena itu, Python secara bertahap menjadi pilihan baru untuk digunakan sebagai bahasa pemrograman pertama untuk mempelajari pemrograman.

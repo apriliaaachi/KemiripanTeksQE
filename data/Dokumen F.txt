@@ -1,0 +1,29 @@
+Fatalitas kanker prostat dan penurunan kualitas hidup akibat gangguan pola berkemih dapat dikurangi dengan pengembangan jenis dan metode pemeriksaan deteksi dini. 
+Manfaat deteksi dini selain untuk mencegah gejala lokal seperti pendarahan, obstruksi saluran kemih dan rasa nyeri yang meluas, juga terbukti efektif mengurangi disfungsi ereksi, inkontinensia, dan kecemasan. 
+Penggunaan alat diagnostik deteksi dini perlu mempertimbangkan usia, faktor risiko, dan pilihan individual berkaitan dengan biaya yang harus dikeluarkan. 
+Perkembangan teknologi pada saat ini mulai bergeser kepada komputerisasi sistem. 
+Banyaknya penemuan yang mengarah pada sistem komputerisasi kepada hampir semua peralatan mulai dari yang sederhana seperti peralatan rumah tangga sampai yang paling kompleks seperti robot, satelit dan lain lain. 
+Dengan melihat gejala seperti ini maka teknologi softcomputing adalah teknologi yang tepat. 
+Teknologi Softcomputing adalah sebuah bidang kajian penelitian interdisipliner dalam ilmu komputasi dan kecerdasan buatan. 
+Beberapa teknik dalam softcomputing antara lain sistem pakar (eXpert system), jaringan syaraf tiruan (neural networks), logika fuzzy (fuzzy logic), dan algoritma genetik (genetic algorithm) banyak dikembangkan karena mempunyai keunggulan dalam penyelesaian masalah yang mengandung ketidakpastian, ketidaktepatan, dan kebenaran parsial, termasuk dalam bidang kesehatan. 
+Terdapat banyak naskah publikasi dalam bidang prognostik dan diagnosa kanker prostat dengan berbagai metode softcomputing. 
+Sistem pakar fuzzy adalah sistem pakar yang menggunakan perhitungan fuzzy dalam mengolah pengetahuan untuk menghasilkan konsekuensi, premis dengan konklusi atau kondisi dengan akibat sehingga menghasilkan informasi yang memiliki keakuratan untuk pengguna. 
+Salah satu metode inferensi fuzzy adalah Mamdani. 
+Mamdani menggunakan operator min max dalam proses implikasi dan komposisi aturan, sehingga sering disebut sebagai metode min max. 
+Ada beberapa contoh metode defuzzifikasi diantaranya adalah fuzzy mean dan centroid. 
+Salah satu yang menggunakan fuzzy adalah Seker et al mengembangkan metode berbasis logika fuzzy untuk pengambilan keputusan prognostic untuk kanker payudara dan prostat. 
+Hasilnya adalah Fuzzy Knowledge Neural Network (FK NN) merupakan teknik yang menghasilkan prediksi akurasi paling tinggi. 
+FK NN menunjukkan bahwa Prostate Specific Antigen (PSA) merupakan faktor paling penting karena akurasi prediksi berkurang setiap kali PSA dihapus dari model. 
+Neuro Fuzzy Classification (NEFCLASS) adalah salah satu algoritma klasifikasi neuro fuzzy yang mampu membangun sistem inferensi fuzzy. 
+Dasar dari penggabungan adalah kelebihan dan kekurangan dari masing masing sistem. 
+Kemampuan utama jaringan syaraf tiruan adalah dapat mengenali sistem melalui proses pembelajaran untuk memperbaiki parameter adaptif. 
+Seperti halnya jaringan syaraf manusia, jaringan syaraf tiruan juga belajar melalui neuron neuron yang saling terhubung dan secara berulang ulang (epoch). 
+Kekurangan dari sistem ini adalah kerumitan strukturya serta membutuhkan waktu untuk proses pembelajarannya. 
+Sedangkan sistem fuzzy mempunyai konsep yang mirip dengan konsep berpikirnya manusia namun tidak memiliki proses pembelajaran terlebih dahulu. 
+Gabungan keduanya akan saling melengkapi kelebihan dan kekurangan Ming maxing sistem. 
+NEFCLASS juga dikenal dengan tingkat akurasinya yang baik. 
+Dan sering sekali menjadi acuan dalam pengklasifikasian dibidang kesehatan. 
+Dalam penelitian ini akan dilakukan perbandingan sistem pakar fuzzy dan neuro fuzzy. 
+Untuk sistem fuzzy akan digunakan metode Mamdani min max pada proses inferensi dan menggunakan metode Centroid pada proses defuzzifikasinya Sedangkan untuk neuro fuzzy akan dicoba jumlah epoch yang berbeda beda. 
+Kedua metode akan diaplikasikan dalam pendiagnosisan kanker prostat. 
+Kemudian akan dihitung tingkat keakuratan kedua metode dalam menghitung resiko kanker prostat

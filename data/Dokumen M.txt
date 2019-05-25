@@ -1,0 +1,21 @@
+Dalam beberapa tahun terakhir, Sudoku telah menjadi salah satu puzzle populer di dunia. 
+Hal ini mempengaruhi munculnya varian Sudoku seperti Jigsaw Sudoku, Sudoku X, Asterisk dan lain lain. 
+Sudoku X adalah sama seperti puzzle sudoku standar tetapi dengan satu aturan tambahan: setiap dua diagonal dari papan puzzle harus berisi angka satu sampai sembilan tepat satu kali. 
+Sudoku telah menjadi puzzle yang sangat sulit untuk dipecahkan. 
+Manusia pada umumnya menggunakan teknik brute force trial and error untuk memecahkan puzzle ini. 
+Komputer juga dapat memecahkan puzzle Sudoku berukuran sembilan kali sembilan dalam hitungan detik dengan menggunakan trik logis mirip dengan yang digunakan oleh manusia. 
+tetapi dapat selesai dengan jauh lebih cepat. 
+Meskipun demikian, algoritma yang efisien untuk menemukan solusi optimal dari Sudoku masih terus dieksplorasi, terutama untuk puzzle Sudoku X. 
+Algoritma yang telah digunakan untuk memecahkan puzzle Sudoku adalah Algoritma Genetika, Particle Swarm Optimization, dan Algoritma Artificial Bee Colony. 
+Algoritma Artificial Bee Colony (ABC) diusulkan oleh Dervis karaboga, algoritma ini meniru lebah saat mencari makan. 
+Algoritma ini digunakan untuk mencari solusi optimal dalam berbagai domain masalah termasuk optimasi kombinatorial. 
+Penelitian Jayson Pacurib mengusulkan perbaikan pada ABC untuk memecahkan puzzle Sudoku. 
+Penelitian itu membandingkan algoritma ABC dan Algoritma Genetika atau Genetic Algorithm (GA), hasilnya menunjukkan bahwa Kemampuan Sudoku solver berbasis ABC melebihi Sudoku solver berbasis GA. 
+Sudoku X puzzle terdiri dari grid berukuran sembilan kali sembilan yang terdiri dari tiga kali tiga sub grid. 
+Sebuah puzzle Sudoku standar sembilan kali sembilan memiliki kombinasi solusi yang sangat banyak. 
+Puzzle tersebut terhitung memiliki enam, enam ratus tujuh puluh, sembilan ratus tiga, tujuh ratus lima puluh dua, dua puluh satu, tujuh puluh dua, sembilan ratus tiga puluh enam, sembilan ratus enam puluh kombinasi yang berbeda. 
+Kombinasi yang lebih besar pada Sudoku X adalah mungkin karena adanya aturan tambahan. 
+Hal ini membuat puzzle Sudoku termasuk ke dalam kelas sulit NP complete, yang mencakup masalah praktikal penting yang besar, seperti penjadwalan, routing, dan sequencing gen. 
+sebagai salah satu masalah NP complete, Sudoku X membutuhkan algoritma yang efisien untuk dapat menemukan solusi yang optimal dalam memecahkan papan puzzle. 
+Sementara itu, penelitian yang membahas tentang varian Sudoku juga belum banyak dilakukan, terutama untuk Sudoku X. 
+Efisiensi algoritma ABC akan dihitung berdasarkan akurasi, waktu dan siklus yang diperlukan untuk memecahkan papan Sudoku X.

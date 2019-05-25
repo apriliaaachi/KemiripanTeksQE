@@ -31,7 +31,7 @@ public class PembobotanTFIDF {
                 count++;
             }
         }
-        return count / totalterms.length;
+        return count;
     }
 
     /**
@@ -50,7 +50,9 @@ public class PembobotanTFIDF {
                 }
             }
         }
-        return 1 + Math.log(listDoc.size() / count);
+        
+        System.out.println(listDoc.size() + "/" +count + " = " + Math.log(listDoc.size() / count));
+        return Math.log10(listDoc.size() / count);
     }
     
     public int dfCalculator(List<String[]> listDoc, String termToCheck) {

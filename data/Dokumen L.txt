@@ -1,0 +1,12 @@
+Evaluasi resiko kredit adalah topik yang penting dalam manajemen resiko keuangan dan menjadi sorotan utama dalam industri perbankan. 
+Kredit dapat memberikan kontribusi yang positif dalam pendapatan bank, melalui bunga yang dibayar oleh debitur. 
+Disisi lain kredit dapat memberikan kontribusi negatif dalam menimbulkan kerugian bagi bank, karena timbulnya kredit kredit bermasalah. 
+sehingga menyebabkan makin besarnya biaya pencadangan aktivitas produktif yang harus disediakan oleh bank, dan mengurangi potensi laba yang akan diperoleh atau lebih jauh akan mengurangi modal yang tersedia pada bank tersebut. 
+Jaringan syaraf tiruan telah sukses digunakan dalam berbagai bidang. 
+dan juga dalam bidang keuangan. 
+Penggunaan jaringan syaraf tiruan menjadi sangat populer di berbagai macam aplikasi bisnis termasuk penilaian kredit. 
+Telah banyak penelitian yang berkembang dengan pesat tentang analisis resiko kredit, diantaranya dengan linear discriminant analysis, logic analysis, probit analysis, linear programming, integer programming,  k-nearest neighbor (KNN), classification tree, artificial neural network (ANN), genetic algorithm (GA), support vector machine (SVM). 
+Jaringan syaraf tiruan dimana mula mula dikembangkan dari percobaan untuk model komunikasi dan proses informasi dari otak manusia, adalah model penilaian kredit yang paling menjanjikan dan telah banyak digunakan oleh banyak sistem penilaian kredit. 
+Penggunaan jaringan syaraf tiruan dalam aplikasi bisnis telah diteliti sebelumnya oleh para penelitian dan jaringan syaraf tiruan telah dipertimbangkan untuk menjadi alat yang teliti untuk analisis kredit diantara yang lain. 
+Algoritma semut biasanya digunakan untuk menyelesaikan persoalan kompleks dimana terdapat banyak variabel. 
+Meskipun tidak optimal, hasil yang didapatkan dengan menggunakan algoritma semut Didasari hal tersebut maka dilakukan penelitian mengenai model jaringan syaraf tiruan untuk mengevaluasi resiko kredit dengan menggunakan metode backpropagation, karena kemampuan mengelola resiko yang handal merupakan salah satu faktor kunci dalam menghantarkan kesinambungan hidup suatu bank.

@@ -1,0 +1,19 @@
+Dalam islam hukuman tidak berdasarkan dari pendapat manusia atau kesepakatan manusia belaka. 
+Seringkali apa yang dalam pandangan manusia baik, pada hakikatnya belum tentu baik Demikian juga, apa yang dalam pandangan manusia buruk. 
+hakikatnya belum tentu buruk. 
+Sehingga bagi umat Islam, harus mengembalikan penilaian baik atau buruk, terpuji dan tercela menurut pandangan syari'at. 
+Penilaian baik atau buruk serta tindakan apa saja yang dilarang dan hukumannya di atur dalam hukum pidana islam. 
+Dengan adanya hukum pidana islam diharapkan bisa melindungi kepentingan dan keselamatan umat manusia dari ancaman tindak kejahatan dan pelanggaran sehingga tercipta situasi kehidupan yang aman dan tertib. 
+Tindak kejahatan yang dimaksud dalam islam merupakan suatu perbuatan yang dipandang tercela oleh syara'. 
+Oleh karena itu, suatu perbuatan tidak dapat dikategorikan tindakan kriminal, kecuali apabila telah ditetapkan melalui syara' (Al Quran, hadist, dan apa apa yang ditunjuk keduanya). 
+Perbuatan yang dilarang oleh syara' tersebut dapat dikatakan dalam istilah jarimah atau jinayah . 
+Jarimah ditinjau dari segi hukumnya terbagi menjadi jarimah hudud, qishash dan ta'zir. 
+Jarimah hudud juga terbagi atas bermacam macam lagi yaitu zina, menuduh zina, minum minuman keras, pencurian, perampokan, dan munad. 
+Perbuatan zina tidak selamanya mendapatkan hukuman rajam. 
+Sehingga dapat disimpulkan bahwa hukum pidana islam sangat kompleks dan untuk menetapkan vonis hukuman bukanlah pekerjaan mudah. 
+Oleh sebab itu, perlu dibangun suatu sistem yang dapat membantu dalam menetapkan hukuman terhadap tindak kejahatan. 
+Untuk membangun sistem tersebut terdapat suatu metode yaitu metode Case Based Reasoning. 
+Menurut Suchada, Charan, dan Thiwaporn Case Based Reasoning adalah solusi dari pemecahan masalah dengan cara membandingkan masalah yang baru dengan pengalaman masa lalu atau kasus lama . 
+Dengan demikian maka sistem ini akan menggunakan kasus kasus yang lama sebagai acuan untuk menetapkan solusi dari kasus yang baru. 
+Maka dari itu, penetapan hukuman tindak kejahatan berdasarkan hukum pidana islam akan berfokus menggunakan metode Case Based Reasoning. 
+Dengan demikian diharapkan sistem ini akan memudahkan dalam menerapkan hukum pidana islam.

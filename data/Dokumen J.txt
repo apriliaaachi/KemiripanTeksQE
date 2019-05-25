@@ -1,0 +1,19 @@
+Bahasa alami tumbuh secara alami untuk memenuhi kebutuhan komunikasi antar manusia. 
+Salah satu contoh bahasa alami yang menjadi bahasa utama untuk berkomunikasi antar warga negara adalah Bahasa inggris. 
+Bahasa inggris juga dijadikan sebagai salah satu mata pelajaran sejak tingkat Sekolah Dasar. 
+Akan tetapi, anak anak pada tingkat Sekolah Dasar masih mengalami kesulitan dalam memahami Bahasa Inggris. 
+Sistem penerjemah yang mampu menerjemahkan bahasa alami sumber ke dalam bahasa alami target akan memberikan kontribusi dalam dunia pendidikan dan teknologi. 
+Kebanyakan topik ilmu dan teknologi ditulis dalam Bahasa Inggris sehingga menjadi kebutuhan bagi dunia akademik untuk memahami bahasa Inggris dengan baik dan sebagai upaya beradaptasi dalam perkembangan teknologi. 
+Frasa termasuk hal yang penting pada sistem penerjemah dikarenakan posisi subjek dan objek pada kalimat biasanya ditempati oleh frasa. 
+Perbedaan struktur atau pola frasa pada Bahasa inggris ke Bahasa Indonesia mengharuskan mesin penerjemah mengetahui aturan dari bahasa target. 
+Penerjemah frasa juga bisa dijadikan salah satu sub sistem dari mesin penerjemah atau information extraction. 
+Beberapa metode yang digunakan dalam penerjemah frasa diantaranya yaitu statistical phrase to based. 
+syntax to based phrase translation, the joint probability model dan phrase to based transfer rule. 
+Perbandingan dari metode metode tersebut diketahui bahwa statistical phrase based memiliki hasil yang lebih baik tetapi kelemahan metode ini yaitu tingkat akurasi ditentukan oleh banyak dan beragamnya data latih. 
+Menurut Adji rule to based phrase translation juga memiliki hasil penerjemah yang baik. 
+Oleh karena itu, pada penelitian ini menggunakan ADJ Technique yang menerapkan konsep transfer rule. 
+Penerapan ADJ Technique pada penelitian Adji juga memiliki kekurangan dikarenakan banyaknya aturan pengenalan jenis frasa yang dibangun. 
+Hal ini menyebabkan adanya frasa yang tidak terdeteksi sehingga tidak dapat diterjemahkan sesuai aturannya. 
+Berdasarkan alasan ini, diperlukan teknik untuk pengenalan frasa tanpa menggunakan aturan yang banyak. 
+Penelitian mengenai pengenalan jenis frasa telah dilakukan menggunakan Recurrent Neural Network. 
+Penelitian tugas akhir ini yaitu melakukan penerjemahan frasa Bahasa inggris to Bahasa Indonesia menggunakan kombinasi Recurrent Neural Network dan ADJ Technique dimana tidak akan menggunakan banyak aturan frasa pada pengenalan jenis frasa sehingga diharapkan dapat mengenali noun phrase, adjective phrase, adverb phase, prepostional phrase dan verb phrase serta menghasilkan terjemahan yang sesuai dengan aturan pada jenis frasa tersebut.

@@ -1,0 +1,37 @@
+Penelitian Terkait, Terdapat beberapa penelitian terdahulu yang telah dilakukan berkaitan dengan penelitian ini. Penelitian sebelumnya dilakukan oleh Kaiming He, Jian Sun dan Xiaoo Tang mengenai penghapusan kabut menggunakan Dark Channel Prior. Pada penelitian tersebut algoritma yang digunakan adalah Dark Channel Prior. Pertama, gambar berkabut dihitung nilai intensitas cahayanya dan dicari Dark Channel dari gambar berkabut tersebut. Setelah itu gambar berkabut dipulihkan menjadi gambar yang lebih jelas. Pada penelitian ini digunakan metode Soft Matting.
+Penelitian selanjutnya merupakan penelitian penghapusan citra berkabut dalam air menggunakan joint trilateral filter. Penelitian ini dilakukan oleh Yudong Seiichi Serikawa dan Huimin Lu. Metode yang digunakan ialah Filter Trigonometri. Proses-proses pada penelitian ini hampir sama dengan penelitian sebelumnya. Namun perkiraan cahaya dalam laut berbeda dengan gambar berkabut luar ruangan. Gambar bebas kabut yang dihasilkan dengan metode ini lebih baik dari metode-metode sebelumnya dan cocok untuk gambar berkabut dalam air.
+Penelitian lainnya dilakukan oleh Shiau. Penelitian yang mereka lakukan adalah mengenai penghapusan kabut pada citra. Dalam penelitian ini proses yang dilakukan hampir sama dengan proses yang dilakukan pada penelitian yang pernah dilakukan sebelumnya. Namun perbedaannya terdapat pada metode yang dilakukan, pada penelitian ini menggunakan Halo Prevention. Hasil eksekusi program dengan metode ini lebih cepat dibandingkan dengan metode-metode sebelumnya.
+Klasifikasi atau kategorisasi teks adalah proses pengelompokan suatu dokumen ke suatu kategori atau kelas (Sebastiani, 2002). Sebuah teks menyampaikan suatu informasi, salah satunya berisi informasi mengenai emosi. Emosi didefinisikan sebagai perasaan yang memotivasi, mengatur, dan menunjukkan persepsi, pikiran, dan tindakan (Izard, 2007). Klasifikasi bertujuan untuk dapat menentukan kategori emosi dari teks yang mengandung emosi yang belum diketahui kategorinya, dengan menggunakan algoritma Complement Naïve Bayes Classifier. Pada tahap klasifikasi, teks yang mengandung emosi harus dilakukan pra-pemrosesan terlebih dahulu, yang terdiri dari tokenizing, filtering dan stemming. Berdasarkan hasil dari uji menggunakan Complement Naïve Bayes akan membuat keputusan jenis kategori emosi yang terkandung dari proses klasifikasi.
+Teks yang digunakan pada penelitian ini mengandung emosi yang diperoleh dari ISEAR
+Databank	(Scherer	and	Wallbott,	1994).	Data-data	di	ISEAR	mengandung	teks	yang
+mendeskripsikan situasi yang dialami manusia ketika mereka merasakan emosi tertentu. Kata yang
+terdapat di dalam teks tersebut memiliki makna tertentu dan dapat digunakan sebagai dasar untuk
+menentukan jenis kategori emosi. Sejumlah penelitian juga menggunakan ISEAR Databank dalam
+pengklasifikasian emosi berbasis teks.
+Sejumlah penelitian tentang emosi manusia telah dilakukan sehingga ada kesepakatan tentang
+emosi dasar (Power and Dalgleish, 2004), yang digunakan untuk penelitian sebagai kategori emosi
+pada proses klasifikasi, yaitu : 
+1.	Kategori Takut 
+Takut sebagai ancaman fisik atau sosial untuk diri sendiri. Beberapa kata biasa digunakan pada teks yang mengandung emosi takut misalnya, takut, panik, seram, cemas, histeris, diganggu dan gemetar. Seperti contoh pada kalimat yang mengandung emosi takut di bawah ini:
+"Ketika saya kecil, saya takut dengan anjing besar. Suatu hari ketika saya pulang ke rumah, seekor anjing besar berbaring di depan pintu. Saya sangat takut sehingga saya tidak berani masuk ke dalam rumah dan saya menunggu sampai ada orang yang lewat."
+Kalimat di atas terdapat kata takut yang menunjukkan bahwa kalimat tersebut termasuk kategori emosi takut.
+2.	Kategori Marah
+Marah sebagai ganjalan atau frustasi dari peran atau tujuan yang di rasakan. Beberapa kata yang biasa digunakan pada teks yang mengandung emosi marah misalnya, marah, cemburu, tersinggung, iri, murka, kejam, bohong dan kesal. Seperti contoh pada kalimat yang mengandung emosi marah di bawah ini:
+"Saya marah ketika saya dibohongi pacar saya, dia pergi dengan wanita lain."
+Kalimat di atas terdapat kata marah dan bohong yang menunjukkan bahwa kalimat tersebut termasuk kategori emosi marah.
+3.	Kategori Senang
+Senang digambarkan sebagai berhasil atau bergerak menuju selesainya peran yang bernilai atau tujuan. Beberapa kata yang biasa digunakan pada teks yang mengandung emosi senang misalnya, senang, gembira, puas, ceria, kagum, simpati, menang, kebersamaan dan bangga.
+Seperti contoh pada kalimat yang mengandung emosi senang di bawah ini:
+"Pertemuan dengan keluarga dan teman yang saya cintai, berbagi kebahagiaan bersama pada pesta ulang tahun."
+Kalimat di atas terdapat kata cintai dan kebahagiaan yang menunjukkan bahwa kalimat tersebut termasuk kategori emosi senang. 
+4.	Kategori Sedih
+Sedih digambarkan sebagai kegagalan atau kerugian tentang peran dan tujuan. Beberapa kata yang biasa digunakan pada teks yang mengandung emosi sedih misalnya, sedih, duka, depresi, menyesal, murung, salah, ceroboh dan sepi. Seperti contoh pada kalimat yang mengandung emosi sedih di bawah ini:
+"Saya sedih dan depresi ketika saya mengetahui kucing kami mati."
+Kalimat di atas terdapat kata sedih dan depresi yang menunjukkan bahwa kalimat tersebut termasuk kategori emosi sedih.
+5.	Kategori Jijik
+Jijik menggambarkan penghapusan atau jarak dari seseorang, objek, atau menolak ide untuk diri sendiri dan menghargai peran dan tujuan. Beberapa kata yang biasa digunakan pada teks yang mengandung emosi jijik misalnya, jijik, muak, kotor, bau, muntah dan mual. Seperti contoh pada kalimat yang mengandung emosi jijik di bawah ini:
+"Saya jijik ketika saya ke restoran yang kotor dan berantakan. Saya tidak suka berada di lingkungan yang kotor."
+Kalimat di atas terdapat kata jijik dan kotor yang menunjukkan bahwa kalimat tersebut termasuk kategori emosi jijik.
+Pada umumnya teks memiliki beberapa karakteristik diantaranya terdapat noise pada data dengan struktur teks yang tidak baik sehingga diperlukan tahapan pra-pemrosesan. Tahap proses awal terhadap teks bertujuan untuk mempersiapkan teks menjadi data yang akan mengalami pengolahan lebih lanjut. Teks mengandung beragam variasi dari bentuk huruf sampai tanda baca. Tanda baca dan angka merupakan noise sehingga pada tahapan pra-pemrosesan akan dihilangkan pada saat pengambilan informasi. Kemudian dilakukan dengan case folding adalah proses mengubah huruf menjadi huruf kecil. Hanya huruf 'a' sampai dengan 'z' yang diterima, selain huruf akan di hilangkan. Tujuan dari tahap pra-pemrosesan adalah menampilkan setiap teks sebagai fitur-fitur 
+dengan memisahkan teks menjadi kata-kata individual (Srividhya et al., 2010). Langkah pra-pemrosesan yang dilakukan pada proses pelatihan dan klasifikasi yaitu tokenizing, filtering dan stemming (Feldman and Sanger, 2007).
+Tahap filtering adalah pada tahap ini dilakukan penghapusan stopword (membuang kata yang kurang penting). Dalam dokumen teks terdapat kata-kata yang frekuensi kehadirannya sangat tinggi. Dalam pengindeksan kata-kata ini tidak diikutsertakan karena tidak memiliki nilai pembeda. Jenis-jenis stop word diantaranya adalah kata depan dan kata sambung seperti, dan, tetapi, dapat, itu, di, pada, atau, sebuah, untuk, dari dan lain-lain, karena tidak memberikan peningkatan tambahan

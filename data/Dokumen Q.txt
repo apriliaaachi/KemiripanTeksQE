@@ -1,0 +1,15 @@
+Tulisan tangan merupakan pengenalan pola karakter. 
+Pengenalan pola karakter sangat menarik untuk dilakukan penelitian. 
+Hal ini dikatakan menarik karena terdapat beberapa masalah dalam tulisan tangan. 
+Beberapa masalah tulisan tangan seperti cara penulisan setiap orang yang berbeda atau bervariasi yang sehingga menyebabkan bentuk tulisan tangan yang tidak konsisten seperti bentuk tulisan tangan yang mengalami rotasi, ukuran tulisan tangan yang berbeda dan penulisan angka tulisan tangan yang tidak selalu sama di setiap waktunya. 
+Tidak hanya cara penulisan, seseorang dapat memiliki kemiripan tulisan tangan dengan orang lain. 
+Selain itu, alat tulis juga dapat mempengaruhi bentuk tulisan tangan seperti tebal dan tipisnya tulisan tangan serta tulisan tangan juga dapat mengalami ambigu dalam pengenalan misalnya angka empat dan sembilan, hal ini disebabkan karena beberapa orang menuliskan angka empat seperti angka sembilan. 
+Dalam pengenalan pola karakter, banyak jenis karakter dapat dikenali oleh komputer dan diselesaikan dengan berbagai algoritma. 
+Berbagai macam pengenalan pola telah berhasil diterapkan di berbagai bidang seperti pengenalan suara, deteksi wajah, pengenalan sidik jari, dan pengenalan tulisan tangan. 
+Beberapa metode yang dikembangkan untuk mengenali tulisan tangan dengan tingkat akurasi yang berbeda beda. 
+Metode tersebut meliputi: pengenalan pola angka tulisan tangan menggunakan Algoritma Propagasi Balik dengan yang dilakukan oleh Chen, pengenalan tulisan tangan angka dinamis menggunakan jaringan syaraf tiruan percepton Multi lapis yang dilakukan oleh Fadlil dan pengenalan angka tulisan tangan secara online menggunakan Support Vector Machine (SVM) yang dilakukan oleh Sarma et al. 
+Penelitian lain yang dilakukan oleh Remtake menggunakan metode United Moment Invariant (UMI) untuk ekstraksi ciri tulisan tangan. 
+Penelitian pengenalan tulisan tangan angka menggunakan metode Self Organizing MOPS (SOM) dilakukan oleh Wang et al. 
+Fakta menunjukkan bahwa hingga saat ini belum ada metode yang dapat mengenali tulisan tangan dari berbagai bahasa manapun dengan tingkat keakuratan seratus persen. 
+Berdasarkan uraian di atas, pengembangan penelitian tulisan tangan belum optimal dengan akurasi yang tinggi mencapai seratus persen. 
+Untuk itu, maka dikembangkan sebuah perangkat lunak untuk mengenali tulisan tangan yang berfokus pada angka  dengan metode UMI dan SOM.

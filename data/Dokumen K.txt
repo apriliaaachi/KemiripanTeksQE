@@ -1,0 +1,30 @@
+Saat ini fungsi sebuah navigator dan pencarian jalur terpendek sangat diperlukan, untuk memperpendek jarak tempuh. 
+Hal itu menjadi alasan dibuatnya aplikasi pencarian jalur terpendek pada ponsel pintar ini, Aplikasi pencarian jalur terpendek tersebut diharapkan dapat membantu pengguna untuk menemukan rute terpendek ke suatu lokasi yang telah ditentukan. 
+Android adalah platform ponsel paling populer. 
+Dengan Android, dapat menggunakan semua aplikasi Google, dan ada lebih dari enam ratus ribu aplikasi dan permainan yang tersedia di Google Play, dengan jutaan lagu, buku, dan ribuan film. 
+Perangkat Android akan lebih cerdas dengan fitur fitur baru yang tidak akan temukan pada platform lain. 
+Keunggulan Android dibandingkan dengan sistem operasi lainya adalah sistem operasi ini yang dikembangkan oleh Google ini bisa digunakan secara gratis karena bersifat terbuka (open source), yang berarti pengembangan dapat melihat dan menggunakan kode sumber sistem. 
+Kode sumber ini adalah salah satu sumber daya yang memungkinkan pengembangan melihat contoh kode android dalam tindakan, dan membantu memperjelas penggunaan saat kurangnya dokumentasi yang ada. 
+Pengembang dapat memanfaatkan sistem dalam cara yang sama seperti aplikasi inti dan dapat menggeser keluar komponen sistem mereka sendiri. 
+Android murah dan mudah untuk dikembangkan, tersedia bagi jutaan pengguna potensial di seluruh dunia, dan memiliki keterbatasan sedikit dibandingkan platform lain. 
+Namun, platform Android relatif muda dan belum mencapai potensi penuh. 
+Sedangkan dalam pencarian jalur terpendek, kecepatan dan keakuratan pencarian lokasi merupakan bagian yang penting. 
+Pengguna harus dapat mencari lokasi yang ditentukan dengan cepat dan akurat Untuk mempermudah pengguna melakukan pencarian lokasi maka disediakan fitur pencarian. 
+Fitur pencarian dapat diimplementasi dalam bahasa Pemrograman dengan menggunakan algoritma tertentu. 
+Salah satu algoritma yang bisa digunakan untuk pencarian jalur terpendek adalah algoritma semut. 
+Algoritma semut biasanya digunakan untuk menyelesaikan persoalan kompleks dimana terdapat banyak variabel. 
+Meskipun tidak optimal, hasil yang didapatkan dengan menggunakan algoritma semut akan mendekati optimal. 
+Algoritma semut diadopsi dari perilaku koloni semut dimana secara alamiah koloni semut mampu menemukan rute terpendek dalam perjalanan dari sarang ke tempat tempat sumber makanan berdasarkan jejak kaki pada lintasan. 
+Karena hal inilah algoritma semut banyak diterapkan dalam pencarian jalur terpendek. 
+Algoritma semut yang dikembangkan Yuanyuan Lin and Jing Zhang, Menggunakan metode optimasi untuk pemilihan simpul dengan cara memperbaharui feromon melalui strategi elitis halus dan penyesuaian tepi berdekatan dalam solusi optimal dengan sarana strategi dan pilihan. 
+Algoritma semut yang dikembangkan oleh Meghn Aggarwal, Dr. 
+Saroj. 
+Dapat memecahkan Traveling Salesman Problem (TSP) dengan lingkungan MATLAB. 
+Hasil percobaan menunjukkan kemampuan optimasi yang baik dari algoritma semut. 
+Kinerja algoritma semut untuk TSP telah dianalisis dalam berbagai parameter yang menunjukkan bahwa jalur yang paling optimal diperoleh ketika jumlah semut sama dengan no. 
+kota serta nilai harus mendekati satu. 
+Watthayu Wiboonsak menggunakan sistem koloni semut yang berlaku untuk masalah rute perjalanan. 
+Dalam kasus ini menggunakan beberapa tempat di Bangkok. 
+Thailand. 
+Dimana algoritma semut digunakan untuk mencari solusi yang baik untuk Traveling Salesman Problem (TSP). 
+Pada tugas akhir ini akan membahas pencarian jalur terpendek dengan mengambil subjek rute menuju rumah sakit dan menggunakan platform android.

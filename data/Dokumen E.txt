@@ -1,0 +1,15 @@
+Mencerna makanan merupakan salah satu aktivitas manusia yang dilakukan secara berlanjut, proses pencernaan pengambilan intisari makanan yang dapat dimanfaatkan sebagai nutrisi oleh tubuh manusia. 
+Sehingga aktivitas yang dilaksanakan setiap hari bisa berjalan lancar. 
+Tidak semua makanan yang masuk ke dalam tubuh dimanfaatkan oleh sistem pencernaan, bahkan ada makanan atau kegiatan tertentu yang dapat membuat sistem pencernaan mengalami gangguan. 
+Gangguan pada sistem pencernaan akan menimbulkan gangguan pada sistem kerja tubuh yang lain. 
+Banyak gangguan yang mungkin terjadi pada sistem pencernaan dengan penyebab yang beragam, yaitu pola makan yang tidak teratur, kurang mengkonsumsi sayuran dan buah buahan, terlalu banyak makan makanan yang pedas maupun berlemak, dan tak mengunyah makanan hingga hancur sering ditemukan sebagai penyebab gangguan pencernaan. 
+Gangguan pencernaan dalam lambung dapat disebabkan oleh bakteri, salah satunya bakteri yang bisa menimbulkan gangguan adalah bakteri Helicobacter Pylori. 
+Bakteri ini dapat menyebabkan infeksi dan tukak lambung (gastritis). 
+Jika jumlah bakteri merugikan ini berkembang melewati harus normal, bisa dipastikan seseorang akan mengalami gangguan pencernaan. 
+Untuk melihat seberapa parah gangguan pada sistem pencernaan dengan menggunakan sistem pakar. 
+Sistem pakar berfungsi sebagai media untuk menampung pengetahuan atau keahlian seorang pakar, kemudian mengelolanya agar dapat digunakan untuk membantu mengimplementasikan peranan pakar tersebut. 
+Diharapkan dengan demikian pengetahuan yang dimiliki oleh pakar (Seorang dokter) tersebut dapat dimanfaatkan oleh pasien dengan lebih efisien dan aplikatif. 
+Dalam mengidentifikasi suatu penyakit sistem pencernaan dapat ditentukan dari gejala utama kategori penyakit tersebut, berawal dari gejala utama tersebut seorang pakar dapat mengajukan pertanyaan yang relevan kepada pasien dalam rangka mengarah kepada hasil akhir yang berupa penentuan identifikasi penyakit, Pengidentifikasian ini sebaiknya dilakukan secara rutin setiap satu bulan sekali sehingga apabila terdeteksi penyakit sistem pencernaan ataupun gejalanya maka akan cepat diberi tindakan medis. 
+Pengidentifikasian ini menggunakan inferensi pengetahuan dengan forward chaining method. 
+Hal ini didasarkan karena kemiripan dan perbedaan yang tidak terlalu jauh antara gejala dan fakta tentang penyakit sistem pencernaan dan penyakit lainnya yang dapat menyebabkan kesalahan pada pendiagnosisan penyakit ini. 
+Metode pelacakan ke depan (Forward Chaining) pada sistem pakar ini dimulai dari sekumpulan data menuju kesimpulan atau keputusan yang terbaik.

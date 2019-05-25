@@ -1,0 +1,24 @@
+Plagiarisme merupakan salah satu bentuk ketidakjujuran yang sering terjadi dalam banyak konteks. 
+Dalam bidang akademis misalnya, praktik plagiat dikategorikan sebagai penjiplakan yang melanggar hak cipta karena dilakukan dengan cara menerbitkan karya orang lain dan menjadikannya seperti karya milik sendiri. 
+Salah satu contoh plagiarisme dalam dunia akademis yaitu ketika seorang pelajar mengumpulkan atau mempresentasikan suatu tugas dari instruktur atau pengajar dengan menyalin tugas dari pelajar lainnya atau dari internet dengan asumsi pengajar mereka tidak mengetahui bahwa tugas tersebut merupakan hasil jiplakan. 
+Pengembangan yang pesat dalam penggunaan internet sebagai sarana belajar dan penelitian akan meningkatkan praktik plagiat di berbagai bidang akibat dari kemudahan mengakses materi di internet. 
+Masalah plagiarisme ini tumbuh menjadi sangat serius di kalangan akademis terutama universitas yang ada di Indonesia. 
+ini dibuktikan dengan banyaknya ditemukan plagiarisme pada proyek tugas akhir mahasiswa. 
+Mendeteksi plagiarisme dapat dilakukan secara manual dan otomatis. 
+Deteksi manual dapat dilakukan oleh manusia, sebagai contoh pada kasus pengajar yang mengecek plagiarisme ke tugas yang diberikan kepada pelajar. 
+Namun deteksi manual sangat tidak efektif jika diterapkan pada dokumen dalam jumlah yang sangat banyak. 
+Sebuah perangkat lunak deteksi plagiarisme dapat dikembangkan untuk mengatasi masalah ini dengan menerapkannya pada bahasa tertentu. 
+Beberapa penelitian telah dilakukan untuk mengembangkan perangkat lunak deteksi plagiarisme untuk beberapa negara di Eropa. 
+Pengembangan sebuah sistem untuk pengenalan wajah merupakan pemrosesan yang sangat kompleks, multidimensi, dan cukup rumit. 
+Beberapa penelitian mengenai sistem pengenalan wajah dengan berbagai metode telah banyak dilakukan seperti penelitian oleh Khashman dan Garad yang telah menerapkan metode PCA. 
+LDA dan jaringan saraf tiruan Propagasi Balik dengan judul Pengenalan Wajah Multi ekspresi menggunakan jaringan saraf tiruan dan pendekatan fitur. 
+Dalam penelitiannya dinyatakan bahwa pendekatan metode PCA dan LDA serta propagasi Balik mampu mengenali citra wajah secara multi ekspresi, yaitu dengan melihat fitur wajah seperti mata, hidung, dan mulut dengan tingkat akurasi delapan puluh sembilan koma tiga persen. 
+Selain itu sebuah penelitian pengenalan wajah dengan menggunakan metode subruang wajah eigen dilakukan untuk mengurangi tingkat kesalahan yaitu tingkat penerimaan kesalahan dan tingkat penolakan kesalahan. 
+Penelitian ini berhasil mengurangi tingkat kesalahan dari sembilan belas koma satu persen menjadi empat belas koma delapan persen. 
+Meskipun metode yang diterapkan pada penelitian tersebut memiliki akurasi yang relatif tinggi, akan tetapi metode itu belum mampu diterapkan ke dalam sistem pengenalan wajah yang berjalan secara waktu nyata. 
+Sehingga diperlukan suatu metode yang dapat diterapkan pada perangkat lunak yang berjalan secara waktu nyata untuk mengenali wajah. 
+Pengklasifikasian wajah dengan jaringan saraf Fungsi Basis Radial (FBR) yang digunakan sebagai metode pembelajaran dalam arsitektur jaringan saraf tiruan telah dimulai dilakukan oleh Gum dan Wechslet. 
+Dalam penelitian sistem pengenalan wajah oleh Thomaz, Feitosa, dan Veiga Alvaro metode PCA digunakan untuk mereduksi dimensi dan penerapan metode Fungsi Basis Radial untuk klasifikasi wajah. 
+Hasil penelitian tersebut menunjukkan bahwa metode Fungsi Basis Radial berhasil mengenali wajah dengan tingkat akurasi sembilan puluh enam persen. 
+Metode ini mampu untuk mengatasi pengenalan wajah secara waktu nyata dikarenakan metode ini melakukan proses komputasi relatif cepat dan akurat sehingga sangat tepat untuk proses pengenalan wajah secara waktu nyata. 
+Oleh karena itu, penelitian pengembangan sistem pengenalan wajah waktu nyata ini menggunakan metode Fungsi Basis Radial untuk klasifikasi wajah dan proses ekstraksi ciri menggunakan kombinasi metode Principal Component Analysis (PCA) dan Linear Dicriminant Analysis (LDA).

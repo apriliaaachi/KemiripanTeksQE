@@ -1,0 +1,17 @@
+Teknologi informasi selalu membawa kenyamanan bagi umat manusia, termasuk bidang jaringan komputer. 
+Kenyataannya, pengguna jaringan komputer sering dihadapkan dengan memecahkan beberapa masalah komunikasi yang kompleks seperti percakapan. 
+Suatu percakapan tidak hanya terjadi secara langsung tetapi tidak langsung, orang melakukan percakapan bisa melalui telepon, email, atau aplikasi chatting dan sulit menemukan intisari dari suatu percakapan. 
+Dengan kata lain, sangat sulit untuk menemukan ringkasan dari semua percakapan yang terjadi antara satu pihak dan pihak lainnya. 
+Pada dasarnya, ada dua tahap dalam meringkas suatu percakapan: pertama Suara menjadi teks, kedua Meringkas teks. 
+Penelitian ini hanya berfokus untuk meringkas teks saja. 
+Dalam text summarization, aspek utama yang harus dibenahi adalah definisi 'ringkasan'. 
+Secara umum, definisi ringkasan adalah teks yang dihasilkan dari satu atau lebih teks, yang berisi sebagian besar informasi dalam teks asli, dan itu tidak lebih dari setengah dari teks asli. 
+Peringkasan teks otomatis adalah pembuatan versi lebih singkat dari sebuah teks dengan memanfaatkan aplikasi yang dijalankan pada komputer. 
+Ada dua pendekatan pada peringkasan teks, yaitu ekstraksi dan abstraksi. 
+Metode ekstraktif bekerja dengan memilih sebuah subset dari kata yang telah ada, frase, atau kalimat yang bersifat teks original ke dalam form ringkasan. 
+Kontrasnya, abstraksi dibuat dengan meregenerasi konten yang sudah diekstrak. 
+Metode abstrak dibangun dengan menggunakan teknik generasi bahasa alami untuk membuat sebuah ringkasan yang lebih mirip kepada manusia yang dapat juga meringkasnya. 
+Dari penjelasan di atas, penelitian ini menawarkan sebuah sistem yang dapat meringkas percakapan dalam bahasa Indonesia yang sudah ada dalam format TXT. 
+Tujuan penelitian ini adalah mendapatkan ringkasan percakapan bahasa Indonesia dengan mengintegerasi algoritma stemming Nazief dan Adriani dan pembobotan term frequency. 
+Dimana nantinya akan ada tahapan awal mengubah teks bahasa modern yang pada umumnya orang awam menyebutnya dengan kata 'gaul' menjadi kata baku dan pembobotan term frequency sebagai pemberatan kata dari teks percakapan yang telah diberikan. 
+Dari keseluruhannya, meringkas percakapan teks ini diharapkan dapat membantu pengguna untuk mendapatkan Sebuah hasil yang jelas dan ringkasan yang dapat diterima dari semua informasi yang telah diberikan dalam bentuk ringkasan form.

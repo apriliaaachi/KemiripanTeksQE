@@ -1,0 +1,11 @@
+Pada saat ini perkembangan teknologi sudah dapat mencakup ke dalam berbagai aspek kehidupan, termasuk aspek kesehatan. 
+Jantung Koroner (IMA) adalah terhentinya aliran darah yang disebabkan oleh sumbatan arteri koroner. 
+Fakta terbesar terjadinya Infark Miokard Akut (IMA) dikarenakan pengaruh pada life style masyarakat yang tinggal di negara maju dengan faktor resiko seperti perokok, obesitas, hipertensi serta diabetes yang akan berpengaruh besar untuk bertambahnya populasi angka kejadian penderita penyakit ini. 
+Di Indonesia, penderita penyakit Jantung diperkirakan sekitar enam sampai lima belas persen dari jumlah 3 penduduk dan bukan hanya di Indonesia, bahkan jumlah penderita jantung di dunia sangat banyak. 
+Di dunia diperkirakan sedikitnya ada satu miliar penderita. 
+Di Amerika Serikat tercatat ada lima puluh juta penderita, di China sebanyak tiga belas koma enam persen dari jumlah penduduk, di Kanada sekitar dua puluh dua persen dari jumlah penduduk. 
+Di Mesir kurang lebih dua puluh enam koma tiga persen. 
+Beberapa metode sistem pakar pendiagnosaan penyakit seperti Case Based Reasoning, Neural Network, Adaptive Neuro Fuzzy inference system, Naive Bayes dan SVM yang diusulkan oleh banyak peneliti untuk mendiagnosis berbagai macam penyakit. 
+Metode dengan ketepatan klasifikasi yang lebih baik akan memberikan informasi lebih memadai untuk potensi mengidentifikasi pasien dan untuk meningkatkan akurasi diagnosis seperti penggabungan dua metode CBR dan PSO. 
+Particle Swarm Optimization (PSO) adalah metode optimisasi yang lebih baik dalam klastering daripada KMeans hal ini dibuktikan dengan nilai error PSO clustering lebih kecii daripada KMeans. 
+Dalam penelitian ini akan membuat aplikasi dalam dunia kesehatan dengan membuat suatu sistem pakar menggunakan penggabungan metode Case Based Reasoning dan metode klastering Particle Swarm optimization.

@@ -196,7 +196,7 @@ public class Thesaurus {
             double N = termsDocArrays.size();
       
             hasilClusterWeight = (bobotWijk/WijBobot)*(Math.log10(N/dfk)/Math.log10(N));            
-            //System.out.println(Arrays.toString(s)+" , Wijk = "+bobotWijk+", Wij = "+WijBobot+", dfk = "+dfk+", N = "+N+ " CW = "+hasilClusterWeight);          
+            System.out.println(Arrays.toString(s)+" , Wijk = "+bobotWijk+", Wij = "+WijBobot+", dfk = "+dfk+", N = "+N+ " CW = "+hasilClusterWeight);          
             j++;
             clusterWeight.add(hasilClusterWeight);
         }        

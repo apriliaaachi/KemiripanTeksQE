@@ -1,0 +1,15 @@
+Informasi adalah bagian yang tidak terpisahkan dari kehidupan manusia. 
+Setiap hari, manusia membutuhkan informasi yang berasal dari orang lain atau dari media (koran, majalah, portal berita online, buku). 
+Salah satu cara yang dilakukan manusia untuk mendapatkan informasi adalah membaca, tetapi akan memakan waktu yang lama untuk menemukan jenis informasi dalam teks. 
+Saat ini jumlah informasi yang tersedia sudah sangat besar karna faktor globalisasi dan akses semakin mudah informasi melalui internet, kita perlu cara untuk mengetahui jenis informasi dengan cepat. 
+salah satunya adalah dengan cara kategori teks otomatis. 
+Setiap informasi dapat dikategorikan ke dalam banyak kategori, tepat satu kategori, atau bahkan tidak termasuk dalam kategori apapun. 
+Kategorisasi teks otomatis adalah proses yang dilakukan untuk menentukan jenis informasi yang terdapat dalam teks. 
+informasi yang telah dikategorikan sesuai dengan kategori informasi adalah tujuan utama dari kategorisasi teks otomatis. 
+Salah satu metode yang digunakan dalam proses kategorisasi teks otomatis adalah metode Rule Reduction. 
+Menurut Devasena dan Hemalatha, kategorisasi teks otomatis dengan metode ini adalah kategorisasi teks berdasarkan kata yang terkandung dalam teks. 
+Setiap kata di dalam teks akan dianalisis satu per satu. 
+Metode Rule Reduction yang telah dikembangkan hanya untuk memproses kategorisasi kata yang ada pada sebuah kalimat saja, dan tidak untuk memproses kategorisasi yang ada pada sebuah teks. 
+Berdasarkan penjelasan sebelumnya, kategorisasi teks otomatis memainkan peran Penting dalam kategorisasi informasi, maka diperlukan perangkat lunak yang mampu mengkategorisasikan teks untuk mempermudah melakukan klasifikasi jenis teks. 
+Dari penjelasan tersebut, penelitian ini akan menerapkan metode Rule Reduction dalam sistem dimana pengguna hanya perlu memberikan masukan berupa teks abstrak karya ilmiah (dapat berupa paper, skripsi, tesis, dan sebagainya) dalam bahasa Indonesia kemudian sistem secara otomatis akan memproses masukan teks tersebut menjadi kata dan jenis kata kemudian menentukan topik utama dari teks tersebut berdasarkan kemunculan dari jenis kata. 
+Penelitian ini diharapkan dapat  membantu pengguna dalam menentukan topik utama dari teks tersebut.

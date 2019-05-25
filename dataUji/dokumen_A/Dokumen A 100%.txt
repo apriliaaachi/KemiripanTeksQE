@@ -1,0 +1,22 @@
+Plagiarisme merupakan salah satu bentuk ketidakjujuran yang sering terjadi dalam banyak konteks. 
+Dalam bidang akademis misalnya, praktik plagiat dikategorikan sebagai penjiplakan yang melanggar hak cipta karena dilakukan dengan cara menerbitkan karya orang lain dan menjadikannya seperti Karya milik sendiri. 
+Salah satu contoh plagiarisme dalam dunia akademis yaitu ketika seorang pelajar mengumpulkan atau mempresentasikan suatu tugas dari instruktur atau pengajar dengan menyalin tugas dari pelajar lainnya atau dari internet dengan asumsi pengajar mereka tidak mengetahui bahwa tugas tersebut merupakan hasil jiplakan. 
+Pengembangan yang pesat dalam penggunaan internet sebagai sarana belajar dan penelitian akan meningkatkan praktik plagiat di berbagai bidang akibat dari kemudahan mengakses materi di internet. 
+Masalah plagiarisme ini tumbuh menjadi sangat serius di kalangan akademis terutama universitas yang ada di Indonesia. 
+ini dibuktikan dengan banyaknya ditemukan plagiarisme pada proyek tugas akhir mahasiswa. 
+Mendeteksi plagiarisme dapat dilakukan secara manual dan otomatis. 
+Deteksi manual dapat dilakukan oleh manusia, sebagai contoh pada kasus pengajar yang mengecek plagiarisme ke tugas yang diberikan kepada pelajar. 
+Namun deteksi manual sangat tidak efektif jika diterapkan pada dokumen dalam jumlah yang sangat banyak. 
+Sebuah perangkat lunak deteksi plagiarisme dapat dikembangkan untuk mengatasi masalah ini dengan menerapkannya pada bahasa tertentu. 
+Beberapa penelitian telah dilakukan untuk mengembangkan perangkat lunak deteksi plagiarisme untuk beberapa negara di Eropa, contohnya seperti pada bahasa Inggris atau Prancis. 
+Sedangkan untuk negara di Asia Tenggara masih sangat dikit, seperti untuk Bahasa Indonesia. 
+Maka dari itu pada penelitian ini perangkat lunak yang dibuat khusus untuk bahasa Indonesia. 
+Beberapa metode untuk perangkat lunak deteksi plagiarisme telah dikembangkan dengan berbagai  pendekatan, akurasi dan waktu proses yang beragam. 
+Perangkat lunak deteksi plagiarisme harus bekerja sampai ke tingkat dokumen, tidak hanya sebatas singkat kalimat. 
+Beberapa metode yang bekerja pada tingkat Levenshtein Distance dan Smith Waterman, Graph based, Rabin Karp, dan pada tingkat dokumen yaitu MinHash and Word Positional Based Approach for Document Selection. 
+Dari penelitian yang dijabarkan diatas, hanya Graph based dan Rabin Karp yang menerapkan stemming untuk bahasa Inggris, hasil penelitian menunjukkan penerapan stemming akan meningkatkan akurasi metode pencocokan string. 
+Dari segi kecepatan waktu proses, metode Levenshtein Distance, Smith Waterman, Graph based, dan Rabin Karp menunjukkan ketergantungan yang erat pada ukuran dokumen atau complexity sebesar O(M+N), pada kasus yang lebih parah O(M+N) dimana M adalah teks dan N adalah pola yang dicari. 
+Hasil lain ditunjukkan oleh metode dengan tingkat kalimat, dimana hasil eksperimen untuk waktu proses pencocokan string yang dilakukan oleh metode MinHash dan Word Positional Based Approach for Document Selection tidak bergantung pada ukuran dokumen, karena pendekatan ini tidak membandingkan keseluruhan isi dokumen melainkan hanya signature. 
+Karena perangkat lunak deteksi plagiarisme disarankan untuk menggunakan pendekatan tingkat dokumen pada tahap proses pencocokan string, diusulkan metode Rabin Karp yang diparalelkan atau PRK untuk mengatasi ketergantungan waktu proses dengan ukuran dokumen. 
+Ide utama dari metode ini adalah dengan membagi teks ke dalam beberapa bagian, kemudian setiap bagian akan melakukan proses secara individu dalam waktu yang bersamaan (paralel). 
+Untuk itu, pada penelitian ini metode PRK akan diterapkan untuk perangkat lunak deteksi plagiarisme sebagai metode Pencocokan string dan menerapkan Stemming pada tahap pra pengolahan untuk Bahasa Indonesia.

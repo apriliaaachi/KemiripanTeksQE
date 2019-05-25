@@ -1,0 +1,21 @@
+Permainan teka teki logika merupakan salah satu jenis permainan yang cukup populer saat ini. 
+Salah satu teka teki yang sangat diminati yaitu Sudoku. 
+Sudoku sebagai sebuah permainan teka teki angka yang sederhana, telah menyihir seluruh dunia mulai dari anak anak sampai orang tua. 
+Untuk memainkan teka teki angka ini pemain tidak harus mempunyai intelektualitas yang tinggi, dan tidak perlu handal berhitung, karena yang dibutuhkan hanya kemampuan berpikir secara logika, kesabaran tinggi dan ketajaman akurasi. 
+Sudoku adalah sejenis teka teki logika yang tujuannya untuk mengisikan angka angka dari satu sampai sembilan ke dalam jaring jaring sembilan kali sembilan yang terdiri dari sembilan kotak tiga kali tiga tanpa ada angka yang berulang di satu baris, kolom atau kotak. 
+Pertama kali diterbitkan di sebuah surat kabar Perancis pada delapan belas sembilan lima. 
+Kemudian menjadi terkenal kembali di Jepang pada sembilan belas delapan enam, ketika penerbit Nikoli menemukan teka teki ini yang diciptakan Howard Garns. 
+Terdapat berbagai macam metode yang dapat digunakan untuk menyelesaikan permainan Sudoku. 
+Sudah banyak  penelitian yang membahas tentang penyelesaian permainan ini, seperti pada penelitian "The Game of Sudoku Advanced Backtrack Approach" yang menggunakan metode Backtracking. 
+"Solving Sudoku Puzzles Using Improved Artificial Bee Colony Algorithm" yang menggunakan algoritma Bee Colony. 
+"Solving NP Complete Problem Using ACO Algorithm" yang menggunakan algoritma Ant Colony Optimazation. 
+Selanjutnya ada beberapa penelitian yang menerapkan algoritma genetika sebagai metode penyelesaiannya diantara lainnya. 
+"Solving Japanese Puzzles By Genetic Algorithm". 
+"A Puzzle Based Artificial Chromosome Genetic Algorithm For The Travelling Salesman Problem". 
+Dari penelitian tersebut dapat disimpulkan bahwa algoritma genetika mampu menyelesaikan persoalan rumit dengan solusi yang valid. 
+Dengan menggunakan algoritma genetika suatu solusi permainan Sudoku direpresentasikan dalam sebuah kromosom atau individu dengan struktur tertentu. 
+Algoritma genetika atau Genetic Algorithm (GA) merupakan algoritma yang memberikan solusi dari masalah yang tidak memiliki suatu metode pencarian yang tepat. 
+Inti dari algoritma genetika adalah secara bertahap akan mencari solusi terbaik dari begitu banyak solusi yang ada. 
+Pada penelitian tugas akhir ini. 
+penulis mencoba mengembangkan sebuah perangkat lunak untuk menyelesaikan permainan Sudoku menggunakan Algoritma Genetika. 
+Untuk merancang permainan sudoku yang interaktif diperlukan solusi algoritma untuk menghasilkan jawaban Sudoku yang valid, dari permasalahan tersebut maka dipilihlah algoritma Genetika karena algoritma ini mempunyai nilai fitness yang menyatakan baik atau tidaknya suatu solusi.

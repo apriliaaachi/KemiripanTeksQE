@@ -1,0 +1,24 @@
+Optimasi pada dasarnya adalah sebuah usaha yang dilakukan untuk memperoleh solusi terbaik dalam menyelesaikan sebuah masalah. 
+Optimasi sendiri sangat berguna hampir di segala bidang dalam melakukan usaha secara efektif dan efisien untuk mencapai target yang diinginkan. 
+Selain itu pembuat keputusan sering dihubungkan dalam proses masalah optimasi. 
+Salah satu masalah optimasi adalah Travelling Salesman Problem (TSP). 
+Meskipun TSP adalah sebuah masalah optimasi sederhana, tetapi biasanya TSP termasuk masalah umum optimasi yang sulit untuk diselesaikan. 
+TSP sendiri adalah masalah untuk mendapatkan rute terpendek oleh seseorang dan harus melewati semua kota dengan masing masing kota hanya boleh dilewati satu kali sampai orang tersebut kembali ke kota asalnya. 
+Sedangkan dalam pencarian jalur terpendek, kecepatan dan keakuratan pencarian lokasi merupakan bagian yang penting. 
+Pengguna harus dapat mencari lokasi yang ditentukan dengan cepat dan akurat. 
+Beberapa objek pencarian terdapat dalam TSP salah satunya adalah masjid. 
+Masjid adalah tempat beribadahnya umat muslim. 
+Pulau Sumatera khususnya Palembang menurut data dari Dewan Masjid Indonesia pada tahun dua ribu lima belas memiliki empat ratu dua puluh lima masjid yang terdaftar. 
+Tetapi tidak semua masjid ini dapat diketahui dan dijangkau oleh semua orang. 
+Hal itu menjadi alasan dibuatnya aplikasi pencarian jalur terpendek ini, Aplikasi pencarian jalur terpendek tersebut diharapkan dapat membantu pengguna untuk menemukan rute terpendek ke suatu lokasi yang telah ditentukan. 
+Untuk mempermudah pengguna melakukan pencarian lokasi maka disediakan fitur pencarian. 
+Fitur pencarian dapat diimplementasi dalam bahasa pemrograman dengan menggunakan algoritma tertentu. 
+Ada banyak metode dalam menyelesaikan TSP, seperti Djikstra Algorithm, Self Organizing Neural Network. 
+Nearest Neighbor. 
+HopfleId Neural Network dan Bee Colony Optimization. 
+Dalam penelitian ini akan digunakan Bee Colony Optimization. 
+Yaitu algoritma yang efisien untuk mencari jalur terpendek dengan objek masjid di Kota Palembang. 
+Meskipun tidak optimal, hasil yang didapatkan dengan menggunakan algoritma Bee Colony Optimization akan mendekati optimal. 
+Algoritma Bee Colony Optimization diadopsi dari perilaku koloni lebah dalam proses mencari dan mengekploitasi makanan. 
+Dengan penyebaran informasi mengenai arah, jarak dan kualitas dari sumber makanan dilakukan dengan cara tarian (Waggle dance) kepada koloni lebah lain yang berada di sarang. 
+Karena hal inilah algoritma Bee Colony optimization banyak diterapkan dalam  pencarian jalur terpendek.

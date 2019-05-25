@@ -1,0 +1,22 @@
+Setiap semester, Jurusan Teknik Informatika Fakultas ilmu Komputer Universitas Sriwijaya Palembang melayani keperluan dosen dan mahasiswa. 
+Mengingat jumlah dosen dan mahasiswa yang banyak, terbatasnya ruang kuliah dan ketersediaan waktu, maka penanganan pelayan tersebut perlu dilakukan secara baik, tepat dan benar sehingga dapat meminimumkan keluhan dari dosen dan mahasiswa. 
+Salah satu wujud pelayanan yang cukup kompleks yaitu pembuatan jadwal kuliah. 
+Terdapat berbagai aspek yang berkaitan dalam penjadwalan tersebut yang harus dilibatkan antara lain terdapat jadwal jadwal dimana dosen yang bersangkutan tidak bisa mengajar. 
+Tidak boleh adanya jadwal kuliah yang beririsan dengan jadwal kuliah angkatan sebelumnya maupun sesudahnya, sehingga mahasiswa dapat mengambil mata kuliah angkatan sebelumnya maupun sesudahnya. 
+Distribusi jadwal perkuliahan juga diharapkan dapat merata tiap harinya untuk setiap kelas. 
+Pekerjaan penjadwalan mata kuliah ini akan semakin berat jika melibatkan semakin banyak kelas per angkatannya. 
+Permasalahan yang sering disebut dengan University Timetabling Problems (UTP) ini, selain dilihat dari sisi mahasiswa, juga harus dilihat dari sisi dosen, yaitu kemungkinan kemungkinan dosen dalam mengampu lebih dari satu mata kuliah yang ada, sebab ada kemungkinan jumlah mata kuliah dan jumlah dosen tidak sebanding, sehingga harus dipikirkan juga solusi agar dosen tidak mengampu dua mata kuliah berbeda pada hari dan jam yang sama. 
+Selain itu, harus dipertimbangkan juga ketersediaan kelas sehingga kegiatan belajar dapat dilaksanakan. 
+Di samping aspek aspek di atas, dalam penyusunan jadwal kuliah ini pun terdapat sangat banyak kemungkinan yang selayaknya dicoba untuk menemukan Penjadwalan terbaik yang membutuhkan waktu yang cukup lama. 
+Pada Teknik informatika Fakultas Komputer Universitas Sriwijaya terdapat kasus dimana terdapat dua kelas Program untuk jurusan Teknik Informatika yakni kelas Reguler dan Bilingual tetapi memiliki sumber daya pengajar yang sama, hal ini menyebabkan seringnya jadwal dosen yang bertabrakan. 
+Dan juga terdapat kasus dimana dosen tidak tetap (dosen dari Fakultas lain) tidak memiliki banyak pilihan waktu mengajar, sehingga jadwal untuk dosen tidak tetap didahulukan, dan pilihan waktu mengajar dosen tetap menjadi berkurang. 
+Selain itu, pada kelas Bilingual, terdapat program belajar di Universitas Teknologi Malaysia pada semester lima. 
+UTP ini telah menarik minat beberapa peneliti karena dapat menghemat banyak waktu kerja. 
+Banyak skema yang berbeda telah diusulkan dalam literatur untuk UTP termasuk melalui penyelesaian UTP menggunakan Algoritma Genetika oleh Kazarlis; Tabu Search untuk UTP skala besar oleh Herth; pembangunan UTP menggunakan Simulated Annealing dan Algoritma Paralel oleh Abramson', serta penyelidikan Constraints based Reasoning untuk UTP oleh Fen, Deris dan Hashim. 
+Dari semua metode, Algoritma Genetika telah banyak digunakan dan telah diterapkan untuk memecahkan masalah penjadwalan universitas sejak tahun sembilan belas sembilan puluh, yaitu Algoritma Genetika sebagai pendekatan baru untuk permasalahan penjadwalan oleh Colorni, Dorigo dan Maniezm. 
+Hal ini karena Algoritma Genetika merupakan algoritma yang kuat untuk menemukan solusi optimal dan memungkinkan untuk memecahkan masalah dalam kondisi level elemen. 
+Algoritma Genetika termasuk teknik pencarian acak terarah (guide random search). 
+Algoritma ini digunakan untuk mendapatkan solusi dari persoalan yang menggunakan satu atau multi variable seperti pada persoalan penjadwalan mata kuliah. 
+Karena itu metode optimasi yang dapat diterapkan untuk mengerjakan penjadwalan mata kuliah ini adalah dengan menggunakan pendekatan Algoritma Genetika. 
+Algoritma Genetika merupakan pendekatan komputasional untuk menyelesaikan masalah yang dimodelkan dengan proses biologi dari evolusi. 
+Diharapkan dengan digunakannya Algoritma Genetika akan diperoleh optimasi penjadwalan yaitu kondisi dimana terjadi kombinasi terbaik untuk pasangan mata kuliah dan dosen pengajar secara keseluruhan, tidak ada permasalahan bentrokan jadwal pada sisi mahasiswa, serta ketersediaan ruang yang cukup dan sesuai secara fasilitas untuk seluruh mata kuliah yang ada.
