@@ -29,6 +29,7 @@ public class DocumentParser {
     private List <double[]> tfidfDocsVector = new ArrayList<>();
     private List <Double> idfSave = new ArrayList<>();
     private List <double[]> tfidfDocsVectorQuery = new ArrayList<>();
+    private final String filePath;
 
     /**
      * Method to read files and store in array.
@@ -36,6 +37,11 @@ public class DocumentParser {
      * @throws FileNotFoundException
      * @throws IOException
      */
+    
+    public DocumentParser(String filePath) {
+        this.filePath = filePath;
+    }
+    
     public void parseFiles(String filePath) throws FileNotFoundException, IOException {
         File[] allfiles = new File(filePath).listFiles();
         BufferedReader in = null;
