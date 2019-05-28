@@ -20,19 +20,19 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
         
-        DocumentParser dp = new DocumentParser();
-        dp.parseFiles("data"); 
-        dp.tfIdfCalculator();
-        
-        Thesaurus ts = new Thesaurus(dp.getTermsDocsArray(), dp.getAllTerms());
-        ts.prepareData(2);
-        ts.tfIdfTermCalculator();
-        ts.tfIdfPairsTermCalculator();
-        ts.clusterWeight();
-        
-        dp.parseFilesU("dataUji/dokumen_A");
-        dp.tfidfQueryCalculator();
-        dp.getCosineSimilarity(); //calculates cosine similarity  
+//        DocumentParser dp = new DocumentParser();
+//        dp.parseFiles("data"); 
+//        dp.tfIdfCalculator();
+//        
+//        Thesaurus ts = new Thesaurus(dp.getTermsDocsArray(), dp.getAllTerms());
+//        ts.prepareData(2);
+//        ts.tfIdfTermCalculator();
+//        ts.tfIdfPairsTermCalculator();
+//        ts.clusterWeight();
+//        
+//        dp.parseFilesU("dataUji/dokumen_A");
+//        dp.tfidfQueryCalculator();
+//        dp.getCosineSimilarity(); //calculates cosine similarity  
     }
     
 }

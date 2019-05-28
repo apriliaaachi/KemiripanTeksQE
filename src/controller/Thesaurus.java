@@ -35,6 +35,7 @@ public class Thesaurus {
     private List <String[]> validPairTerm = new ArrayList<>();
     private List <String> expandTerm = new ArrayList<>();
     private String[] dok = new String[120];
+    private PembobotanTFIDF bobot = new PembobotanTFIDF();
     
     
     
@@ -87,15 +88,16 @@ public class Thesaurus {
         double idf; //inverse document frequency
         double tfidf; //term requency inverse document frequency 
         double df = 0;
-       
+        
+        
         //get tfidf vector
         for (String[] docTermsArray : termsDocArrays) {
             double[] tfidfvectors = new double[allTerms.size()];
                       
             int count = 0;
             for (String terms : allTerms) {
-                tf = new PembobotanTFIDF().tfCalculator(docTermsArray, terms);
-                idf = new PembobotanTFIDF().idfCalculator(termsDocArrays, terms);  
+                tf = bobot.tfCalculator(docTermsArray, terms);
+                idf = bobot.idfCalculator(termsDocArrays, terms);  
                 tfidf = tf * idf;
                 tfidfvectors[count] = tfidf;               
                 count++; 
@@ -105,7 +107,7 @@ public class Thesaurus {
         
         //get df
         for (String terms : allTerms) {
-            df = new PembobotanTFIDF().dfCalculator(termsDocArrays, terms);
+            df = bobot.dfCalculator(termsDocArrays, terms);
             dfVector.add(df);
         }
                 
@@ -154,8 +156,8 @@ public class Thesaurus {
             int count = 0;
     
             for (String[] terms : allPairsTerms) {      
-                tf = new PembobotanTFIDF().tfPairCalculator(docTermsArray, terms);
-                idf = new PembobotanTFIDF().idfPairCalculator(termsDocArrays, terms);
+                tf = bobot.tfPairCalculator(docTermsArray, terms);
+                idf = bobot.idfPairCalculator(termsDocArrays, terms);
                 tfidf = tf * idf;
                 tfidfvectors[count] = tfidf;               
                 count++; 

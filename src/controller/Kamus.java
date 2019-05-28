@@ -24,7 +24,6 @@ public class Kamus {
     private static Map<Character, String[]> KamusKDid;
     private static List<Character> indexAlphabet;
     
-    
     public static void initKamusKDid() {
         // init Kamus
         String pathKamusKDid = "kamus/kamusKDid/";

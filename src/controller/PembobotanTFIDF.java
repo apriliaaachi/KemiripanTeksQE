@@ -9,6 +9,7 @@ package controller;
  *
  * @author Asus
  */
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,12 +19,97 @@ import java.util.List;
  */
 public class PembobotanTFIDF {
     
-    /**
-     * Calculates the tf of term termToCheck
-     * @param totalterms : Array of all the words under processing document
-     * @param termToCheck : term of which tf is to be calculated.
-     * @return tf(term frequency) of term termToCheck
-     */
+    private List<Double> idfSave = new ArrayList<>();
+    private List<double[]> tfidfDocsVector = new ArrayList<>();
+    private double[] tfidfQueryvectors;
+    private List<String> allTerms;
+
+    public PembobotanTFIDF(List<String> termsUniq) {
+         allTerms = termsUniq;
+    }
+
+    public PembobotanTFIDF() {
+    }
+    
+      
+    public void tfIdfCalculator(List<String[]> termsDocsArray) {
+        double tf; //term frequency
+        double idf = 0; //inverse document frequency
+        double tfidf; //term requency inverse document frequency  
+        
+        
+        for (int i = 0; i < termsDocsArray.size(); i++) {
+            System.out.println(termsDocsArray.get(i).length);
+            for (int j = 0; j < termsDocsArray.get(i).length; j++) {
+                System.out.println(termsDocsArray.get(i)[j]);
+            }
+        }
+        
+        for (String[] docTermsArray : termsDocsArray) {
+            double[] tfidfvectors = new double[allTerms.size()];
+            int count = 0;
+            
+            System.out.println("terms" + allTerms.size());
+            for (String terms : allTerms) {
+                
+                tf = tfCalculator(docTermsArray, terms);
+                idf = idfCalculator(termsDocsArray, terms);
+                
+                tfidf = tf*idf ;
+                tfidfvectors[count] = tfidf;
+                
+                idfSave.add(idf);
+                count++;
+            }
+
+            tfidfDocsVector.add(tfidfvectors);  //string document vectors;  
+            
+ 
+        }
+        
+        for (int i = 0; i < tfidfDocsVector.size(); i++) {
+            System.out.println(tfidfDocsVector.get(i).length);
+            double[] sum = tfidfDocsVector.get(i);
+
+            for (int j = 0; j < sum.length; j++) {
+                //System.out.print(sum[j]);
+            }
+        }
+  
+    }
+    
+    public List <double[]> getTfidfDocsVector() {
+        return tfidfDocsVector;
+    }
+    
+    public List<Double> getIDFSave() {
+        return idfSave;
+    }
+
+    public void tfidfQueryCalculator(String[] termsDocsArrayU, List<Double> idf) {
+        double tf; //term frequency
+        double tfidf; //term requency inverse document frequency        
+        
+        tfidfQueryvectors = new double[allTerms.size()];
+            
+        int count = 0;
+        for (String terms : allTerms) {
+            tf = tfCalculator(termsDocsArrayU, terms);
+            tfidf = tf * idf.get(count);
+            tfidfQueryvectors[count] = tfidf;
+            
+            System.out.println(terms+" : " + "tf*idf : " + tf +"*"+ idf.get(count) +" = " + tfidf );
+                
+            count++;
+        }
+  
+    }
+    
+    public double[] getTfidfQueryVector() {
+        return tfidfQueryvectors;
+    }
+    
+    
     public double tfCalculator(String[] totalterms, String termToCheck) {
         double count = 0;  //to count the overall occurrence of the term termToCheck
         for (String s : totalterms) {
@@ -34,12 +120,7 @@ public class PembobotanTFIDF {
         return count;
     }
 
-    /**
-     * Calculates idf of term termToCheck
-     * @param allTerms : all the terms of all the documents
-     * @param termToCheck
-     * @return idf(inverse document frequency) score
-     */
+
     public double idfCalculator(List<String[]> listDoc, String termToCheck) {
         double count = 0;
         for (String[] ss : listDoc) {
@@ -96,14 +177,6 @@ public class PembobotanTFIDF {
         }
     }
     
-    
-
-    /**
-     * Calculated idf of term termToCheck
-     * @param listDoc : all the terms of all the documents
-     * @param termToCheck
-     * @return idf(inverse document frequency) score
-     */
     public double idfPairCalculator(List<String[]> listDoc, String[] termToCheck) {
         double count = 0;
         String term1 = termToCheck[0];
@@ -117,4 +190,6 @@ public class PembobotanTFIDF {
         return Math.log10(listDoc.size() / count);                   
  
     }
+    
+    
 }

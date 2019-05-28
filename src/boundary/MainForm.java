@@ -6,8 +6,13 @@
 package boundary;
 
 import controller.DocumentParser;
+import controller.PembobotanTFIDF;
+import controller.TextDetectionWithQE;
+import controller.TextDetectionWithoutQE;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -19,8 +24,13 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class MainForm extends javax.swing.JFrame {
     
-    private String selectedFile;
+    private String selectedFolder;
     private DocumentParser dr;
+    private PembobotanTFIDF tfidf;
+    private List<String> allTerms; 
+    private List<Double> idf;
+    private List<String[]> termDocsArray;
+    private List<double[]> tfidfDocsVector;
             
     /**
      * Creates new form MainForm
@@ -38,9 +48,10 @@ public class MainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        textDetection = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
-        filePath = new java.awt.TextField();
+        folderPath = new java.awt.TextField();
         loadBtn = new java.awt.Button();
         jPanel4 = new javax.swing.JPanel();
         sizeCB = new javax.swing.JComboBox<>();
@@ -76,14 +87,14 @@ public class MainForm extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 204));
 
-        filePath.addActionListener(new java.awt.event.ActionListener() {
+        folderPath.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                filePathActionPerformed(evt);
+                folderPathActionPerformed(evt);
             }
         });
-        filePath.addTextListener(new java.awt.event.TextListener() {
+        folderPath.addTextListener(new java.awt.event.TextListener() {
             public void textValueChanged(java.awt.event.TextEvent evt) {
-                filePathTextValueChanged(evt);
+                folderPathTextValueChanged(evt);
             }
         });
 
@@ -100,7 +111,7 @@ public class MainForm extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addComponent(filePath, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(folderPath, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(loadBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(25, 25, 25))
@@ -111,7 +122,7 @@ public class MainForm extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(loadBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(filePath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(folderPath, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -155,6 +166,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 204));
 
+        textDetection.add(withoutQeRB);
         withoutQeRB.setText("Tanpa Query Expansion");
         withoutQeRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +174,7 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        textDetection.add(withQeRB);
         withQeRB.setText("Dengan Query Expasion");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -171,7 +184,7 @@ public class MainForm extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(withoutQeRB, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                    .addComponent(withoutQeRB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(withQeRB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -187,7 +200,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jLabel5.setText("Dokumen Pembanding");
 
-        dokCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dokumen Pembanding A20%", "Dokumen Pembanding A40%", "Dokumen Pembanding A60%", "Dokumen Pembanding A80%", "Dokumen Pembanding A100%", "Dokumen Pembandig B20%", "Dokumen Pembandig B40%", "Dokumen Pembandig B60%", "Dokumen Pembandig B80%", "Dokumen Pembandig B100%", "Dokumen Pembanding C20%", "Dokumen Pembanding C40%", "Dokumen Pembanding C60%", "Dokumen Pembanding C80%", "Dokumen Pembanding C100%", "Dokumen Pembanding D20%", "Dokumen Pembanding D40%", "Dokumen Pembanding D60%", "Dokumen Pembanding D80%", "Dokumen Pembanding D100%", "Dokumen Pembanding E20%", "Dokumen Pembanding E40%", "Dokumen Pembanding E60%", "Dokumen Pembanding E80%", "Dokumen Pembanding E100%", "Dokumen Pembanding F20%", "Dokumen Pembanding F40%", "Dokumen Pembanding F60%", "Dokumen Pembanding F80%", "Dokumen Pembanding F100%", "Dokumen Pembanding G20%", "Dokumen Pembanding G40%", "Dokumen Pembanding G60%", "Dokumen Pembanding G80%", "Dokumen Pembanding G100%", "Dokumen Pembanding H20%", "Dokumen Pembanding H40%", "Dokumen Pembanding H60%", "Dokumen Pembanding H80%", "Dokumen Pembanding H100%", "Dokumen Pembanding I20%", "Dokumen Pembanding I40%", "Dokumen Pembanding I60%", "Dokumen Pembanding I80%", "Dokumen Pembanding I100%", "Dokumen Pembanding J20%", "Dokumen Pembanding J40%", "Dokumen Pembanding J60%", "Dokumen Pembanding J80%", "Dokumen Pembanding J100%", "Dokumen Pembanding K20%", "Dokumen Pembanding K40%", "Dokumen Pembanding K60%", "Dokumen Pembanding K80%", "Dokumen Pembanding K100%", "Dokumen Pembanding L20%", "Dokumen Pembanding L40%", "Dokumen Pembanding L60%", "Dokumen Pembanding L80%", "Dokumen Pembanding L100%", "Dokumen Pembanding M20%", "Dokumen Pembanding M40%", "Dokumen Pembanding M60%", "Dokumen Pembanding M80%", "Dokumen Pembanding M100%", "Dokumen Pembanding N20%", "Dokumen Pembanding N40%", "Dokumen Pembanding N60%", "Dokumen Pembanding N80%", "Dokumen Pembanding N100%", "Dokumen Pembanding O20%", "Dokumen Pembanding O40%", "Dokumen Pembanding O60%", "Dokumen Pembanding O80%", "Dokumen Pembanding O100%", "Dokumen Pembanding P20%", "Dokumen Pembanding P40%", "Dokumen Pembanding P60%", "Dokumen Pembanding P80%", "Dokumen Pembanding P100%", "Dokumen Pembanding Q20%", "Dokumen Pembanding Q40%", "Dokumen Pembanding Q60%", "Dokumen Pembanding Q80%", "Dokumen Pembanding Q100%", "Dokumen Pembanding R20%", "Dokumen Pembanding R40%", "Dokumen Pembanding R60%", "Dokumen Pembanding R80%", "Dokumen Pembanding R100%", "Dokumen Pembanding S20%", "Dokumen Pembanding S40%", "Dokumen Pembanding S60%", "Dokumen Pembanding S80%", "Dokumen Pembanding S100%" }));
+        dokCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dokumen A20%", "Dokumen A40%", "Dokumen A60%", "Dokumen A80%", "Dokumen A100%", "Dokumen B20%", "Dokumen B40%", "Dokumen B60%", "Dokumen B80%", "Dokumen B100%", "Dokumen C20%", "Dokumen C40%", "Dokumen C60%", "Dokumen C80%", "Dokumen C100%", "Dokumen D20%", "Dokumen D40%", "Dokumen D60%", "Dokumen D80%", "Dokumen D100%", "Dokumen E20%", "Dokumen E40%", "Dokumen E60%", "Dokumen E80%", "Dokumen E100%", "Dokumen F20%", "Dokumen F40%", "Dokumen F60%", "Dokumen F80%", "Dokumen F100%", "Dokumen G20%", "Dokumen G40%", "Dokumen G60%", "Dokumen G80%", "Dokumen G100%", "Dokumen H20%", "Dokumen H40%", "Dokumen H60%", "Dokumen H80%", "Dokumen H100%", "Dokumen I20%", "Dokumen I40%", "Dokumen I60%", "Dokumen I80%", "Dokumen I100%", "Dokumen J20%", "Dokumen J40%", "Dokumen J60%", "Dokumen J80%", "Dokumen J100%", "Dokumen K20%", "Dokumen K40%", "Dokumen K60%", "Dokumen K80%", "Dokumen K100%", "Dokumen L20%", "Dokumen L40%", "Dokumen L60%", "Dokumen L80%", "Dokumen L100%", "Dokumen M20%", "Dokumen M40%", "Dokumen M60%", "Dokumen M80%", "Dokumen M100%", "Dokumen N20%", "Dokumen N40%", "Dokumen N60%", "Dokumen N80%", "Dokumen N100%", "Dokumen O20%", "Dokumen O40%", "Dokumen O60%", "Dokumen O80%", "Dokumen O100%", "Dokumen P20%", "Dokumen P40%", "Dokumen P60%", "Dokumen P80%", "Dokumen P100%", "Dokumen Q20%", "Dokumen Q40%", "Dokumen Q60%", "Dokumen Q80%", "Dokumen Q100%", "Dokumen R20%", "Dokumen R40%", "Dokumen R60%", "Dokumen R80%", "Dokumen R100%", "Dokumen S20%", "Dokumen S40%", "Dokumen S60%", "Dokumen S80%", "Dokumen S100%" }));
         dokCB1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dokCB1ActionPerformed(evt);
@@ -195,8 +208,13 @@ public class MainForm extends javax.swing.JFrame {
         });
 
         similarityBtn.setText("Similarity");
+        similarityBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                similarityBtnActionPerformed(evt);
+            }
+        });
 
-        dokCB2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dokumen Pembanding A20%", "Dokumen Pembanding A50%", "Dokumen Pembanding A100%", "Dokumen Pembanding B20%", "Dokumen Pembanding B50%", "Dokumen Pembanding B100%", "Dokumen Pembanding C20%", "Dokumen Pembanding C50%", "Dokumen Pembanding C100%", "Dokumen Pembanding D20%", "Dokumen Pembanding D50%", "Dokumen Pembanding D100%", "Dokumen Pembanding E20%", "Dokumen Pembanding E50%", "Dokumen Pembanding E100%", "Dokumen Pembanding F20%", "Dokumen Pembanding F50%", "Dokumen Pembanding F100%", "Dokumen Pembanding G20%", "Dokumen Pembanding G50%", "Dokumen Pembanding G100%" }));
+        dokCB2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dokumen A20%", "Dokumen A50%", "Dokumen A100%", "Dokumen B20%", "Dokumen B50%", "Dokumen B100%", "Dokumen C20%", "Dokumen C50%", "Dokumen C100%", "Dokumen D20%", "Dokumen D50%", "Dokumen D100%", "Dokumen E20%", "Dokumen E50%", "Dokumen E100%", "Dokumen F20%", "Dokumen F50%", "Dokumen F100%", "Dokumen G20%", "Dokumen G50%", "Dokumen G100%" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -353,31 +371,42 @@ public class MainForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void filePathTextValueChanged(java.awt.event.TextEvent evt) {//GEN-FIRST:event_filePathTextValueChanged
+    private void folderPathTextValueChanged(java.awt.event.TextEvent evt) {//GEN-FIRST:event_folderPathTextValueChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_filePathTextValueChanged
+    }//GEN-LAST:event_folderPathTextValueChanged
 
-    private void filePathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filePathActionPerformed
+    private void folderPathActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_folderPathActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_filePathActionPerformed
+    }//GEN-LAST:event_folderPathActionPerformed
 
     private void loadBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadBtnActionPerformed
         // TODO add your handling code here:
         JFileChooser chooser = new JFileChooser();
-        chooser.setDialogTitle("Pilih File");
+        chooser.setDialogTitle("Pilih Folder");
+        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        chooser.setAcceptAllFileFilterUsed(false);
         chooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
         FileNameExtensionFilter filter = new FileNameExtensionFilter("TEXT FILES","txt", "text");
         chooser.setFileFilter(filter);
         
         if (chooser.showOpenDialog(null)==JFileChooser.APPROVE_OPTION) {
             try {
-                String selectedFile = String.valueOf(chooser.getSelectedFile());
-                filePath.setText(selectedFile);
-                System.out.println("Selected File: " + selectedFile);
-                dr = new DocumentParser (selectedFile);
+                selectedFolder = String.valueOf(chooser.getSelectedFile());
+                folderPath.setText(selectedFolder);
+                System.out.println("Selected File: " + selectedFolder);
+                dr = new DocumentParser ();
+                dr.parseFiles(selectedFolder);
+                allTerms = dr.getAllTerms();
+                termDocsArray = dr.getTermsDocsArray();
+                tfidf = new PembobotanTFIDF(allTerms);
+                tfidf.tfIdfCalculator(dr.getTermsDocsArray());
+                tfidfDocsVector = tfidf.getTfidfDocsVector();
+                idf = tfidf.getIDFSave();
                 
             } catch (NullPointerException e) {
                 JOptionPane.showMessageDialog(null, "format file not .txt", "Failed", JOptionPane.ERROR_MESSAGE);
+            } catch (IOException ex) {
+                Logger.getLogger(MainForm.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
             System.out.println("Failed");
@@ -392,6 +421,57 @@ public class MainForm extends javax.swing.JFrame {
     private void dokCB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dokCB1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dokCB1ActionPerformed
+    
+    private void doProsesWithQE() throws IOException {
+        String data, path;  
+        data = dokCB1.getSelectedItem().toString();
+        path = "dataUji/"+data+".txt";
+        
+        System.out.println(path);
+        
+        TextDetectionWithQE tdq = new TextDetectionWithQE();
+        tdq.parseFilesU(path);
+        tfidf = new PembobotanTFIDF(allTerms);
+        tfidf.tfidfQueryCalculator(tdq.getTermDocArray(), idf);
+
+        
+        tdq.getCosineSimilarity(tfidfDocsVector, tfidf.getTfidfQueryVector());
+    }
+    
+    private void doProsesWithoutQE() throws IOException {
+        String data, path;  
+        data = dokCB1.getSelectedItem().toString();
+        path = "dataUji/"+data+".txt";
+        
+        System.out.println(path);
+        
+        TextDetectionWithoutQE td = new TextDetectionWithoutQE();
+        td.parseFilesU(path);
+        tfidf = new PembobotanTFIDF(allTerms);
+        tfidf.tfidfQueryCalculator(td.getTermDocArray(), idf);
+        td.getCosineSimilarity(tfidfDocsVector, tfidf.getTfidfQueryVector());
+        
+        
+    }
+    
+    private void similarityBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_similarityBtnActionPerformed
+        // TODO add your handling code here:
+        if(withoutQeRB.isSelected()) {
+            try {
+                doProsesWithoutQE();
+            } catch (IOException ex) {
+                Logger.getLogger(MainForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        } else if (withQeRB.isSelected()) {
+            try {
+                doProsesWithQE();
+            } catch (IOException ex) {
+                Logger.getLogger(MainForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+    }//GEN-LAST:event_similarityBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -432,7 +512,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JButton createBtn;
     private javax.swing.JComboBox<String> dokCB1;
     private javax.swing.JComboBox<String> dokCB2;
-    private java.awt.TextField filePath;
+    private java.awt.TextField folderPath;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -460,6 +540,7 @@ public class MainForm extends javax.swing.JFrame {
     private java.awt.Button loadBtn;
     private javax.swing.JButton similarityBtn;
     private javax.swing.JComboBox<String> sizeCB;
+    private javax.swing.ButtonGroup textDetection;
     private javax.swing.JRadioButton withQeRB;
     private javax.swing.JRadioButton withoutQeRB;
     // End of variables declaration//GEN-END:variables

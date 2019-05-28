@@ -29,7 +29,7 @@ public class DocumentParser {
     private List <double[]> tfidfDocsVector = new ArrayList<>();
     private List <Double> idfSave = new ArrayList<>();
     private List <double[]> tfidfDocsVectorQuery = new ArrayList<>();
-    private final String filePath;
+    
 
     /**
      * Method to read files and store in array.
@@ -38,16 +38,17 @@ public class DocumentParser {
      * @throws IOException
      */
     
-    public DocumentParser(String filePath) {
-        this.filePath = filePath;
+    public DocumentParser() {
+        
     }
     
-    public void parseFiles(String filePath) throws FileNotFoundException, IOException {
-        File[] allfiles = new File(filePath).listFiles();
+    
+    public void parseFiles(String folderPath) throws FileNotFoundException, IOException {
+        File[] allfiles = new File(folderPath).listFiles();
         BufferedReader in = null;
         Kamus kamus = new Kamus();
         List <String> hasilStemm = new ArrayList<>();
-        for (File f : allfiles) {
+        for (File f : allfiles) { //foreach for (int i=0; i<allfile.size; i++)
             if (f.getName().endsWith(".txt")) {
                 in = new BufferedReader(new FileReader(f));
                 StringBuilder sb = new StringBuilder();
@@ -58,19 +59,19 @@ public class DocumentParser {
                 
                 System.out.println(sb.toString());
                 
-                String[] tokenizedTerms = sb.toString().toLowerCase().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
-                List <String> listTermDoc = new ArrayList<String>(Arrays.asList(tokenizedTerms));
+                String[] tokenizedTerms = sb.toString().toLowerCase().replaceAll("[!\"$%&'()*\\+,.;:/<=>?\\[\\]^~_\\`{|}…0987654321]", "").split("\\W+");   //to get individual terms
+                List <String> listTermDoc = new ArrayList<>(Arrays.asList(tokenizedTerms));
                 listTermDoc.removeAll(kamus.readStopWord());  //stopword pada TermDoc
                     
                 for (String stemm : listTermDoc){
                     Stemming st = new Stemming(); //Stemm
                     
-                    System.out.println(stemm);
+                    //System.out.println(stemm);
                     
                     stemm = st.kataDasar(stemm);
                     
-                    System.out.println(stemm);
-                    System.out.println("sukses");
+                    //System.out.println(stemm);
+                    
                     
                     hasilStemm.add(stemm);
                        
@@ -95,171 +96,14 @@ public class DocumentParser {
         return termsDocsArray;
     }
     
-    public void parseFilesU(String filePath) throws FileNotFoundException, IOException {
-        File[] allfiles = new File(filePath).listFiles();
-        BufferedReader in = null;
-        Kamus kamus = new Kamus();
-        List <String> hasilStemm = new ArrayList<>();
-        for (File f : allfiles) {
-            if (f.getName().endsWith(".txt")) {
-                in = new BufferedReader(new FileReader(f));
-                StringBuilder sb = new StringBuilder();
-                String s = null;
-                while ((s = in.readLine()) != null) {
-                    sb.append(s);
-                }
-                
-                String[] tokenizedTerms = sb.toString().toLowerCase().replaceAll("[\\W&&[^\\s]]", "").split("\\W+");   //to get individual terms
-                List <String> listTermDoc = new ArrayList<String>(Arrays.asList(tokenizedTerms));
-                listTermDoc.removeAll(kamus.readStopWord());  //stopword pada TermDoc
-                    
-                for (String stemm : listTermDoc){
-                    Stemming st = new Stemming(); //Stemm
-                    stemm = st.kataDasar(stemm);
-                    hasilStemm.add(stemm);
-
-                }  
-                
-                String joinTerm = String.join(" ", hasilStemm);
-                System.out.println(getExpansionTerm(joinTerm));
-                String[] termDocAfterStopWord = getExpansionTerm(joinTerm).split("\\W+");
-                
-                termsDocsArrayU.add(termDocAfterStopWord); //token yang sudah dipraproses masuk ke termsDocArrays
-                hasilStemm.clear();
-            }
-        }
-        
-        for (int i = 0; i < termsDocsArrayU.size(); i++) {
-            for (int j = 0; j < termsDocsArrayU.get(i).length; j++) {
-                System.out.println(termsDocsArrayU.get(i)[j]);
-            }
-        }
-
-    }
-
+    
     /**
      * Method to create termVector according to its tfidf score.
      */
-    public void tfIdfCalculator() {
-        double tf; //term frequency
-        double idf = 0; //inverse document frequency
-        double tfidf; //term requency inverse document frequency        
-        for (String[] docTermsArray : termsDocsArray) {
-            double[] tfidfvectors = new double[allTerms.size()];
-            int count = 0;
-            for (String terms : allTerms) {
-                tf = new PembobotanTFIDF().tfCalculator(docTermsArray, terms);
-                idf = new PembobotanTFIDF().idfCalculator(termsDocsArray, terms);
-                tfidf = tf * idf;
-                tfidfvectors[count] = tfidf;
-                
-                idfSave.add(idf);
-                count++;
-            }
-
-            tfidfDocsVector.add(tfidfvectors);  //string document vectors;  
-            
- 
-        }
-        
-        for (int i = 0; i < tfidfDocsVector.size(); i++) {
-            System.out.println(tfidfDocsVector.get(i).length);
-            double[] sum = tfidfDocsVector.get(i);
-
-            for (int j = 0; j < sum.length; j++) {
-                //System.out.print(sum[j]);
-            }
-        }
-        
-        System.out.println("idf " + idfSave.size());
-        
-        
-    }
-
-    public void tfidfQueryCalculator() {
-        double tf; //term frequency
-        double idf; //inverse document frequency
-        double tfidf; //term requency inverse document frequency        
-        for (String[] docTermsArray : termsDocsArrayU) {
-            double[] tfidfvectors = new double[allTerms.size()];
-            
-            int count = 0;
-            for (String terms : allTerms) {
-                tf = new PembobotanTFIDF().tfCalculator(docTermsArray, terms);
-                tfidf = tf * idfSave.get(count);
-                tfidfvectors[count] = tfidf;
-                
-                System.out.println("tf*idf : " + tf +"*"+ idfSave.get(count) +" = " + tfidf );
-                
-                count++;
-            }
-  
-            tfidfDocsVectorQuery.add(tfidfvectors);  //string document vectors;    
     
-        }
-        
-        for (int i = 0; i < tfidfDocsVectorQuery.size(); i++) {
-            System.out.println(tfidfDocsVectorQuery.get(i).length);
-            for (int j = 0; j < tfidfDocsVectorQuery.get(i).length; j++) {
-                //System.out.print(idfSave.get(i)[j]);
-            }
-            //System.out.println("");
-        }
-        
-    }
     
-    public void getCosineSimilarity() {
-        for (int i = 0; i < tfidfDocsVectorQuery.size(); i++) {
-            for (int j = 0; j < tfidfDocsVector.size(); j++) {
-                System.out.println("between " + i + " and " + j + "  =  "
-                    + new CosineSimilarity().cosineSimilarity
-                    (
-                       tfidfDocsVectorQuery.get(i), 
-                       tfidfDocsVector.get(j)
-                    )
-                );
-            }
-        }
-    }
     
-    public String getExpansionTerm(String keyword) throws FileNotFoundException{
-        //baca kamus Thesaurus Akhir (validasi Kateglo)
-        Scanner sc = new Scanner(new File("hasilThesaurusSize2.txt"));
-        List<String> lines = new ArrayList<String>();
-        List<String[]> bacaThesaurus = new ArrayList<>();
-        List <String> expandKata = new ArrayList<>();
-        while (sc.hasNextLine()) {
-            lines.add(sc.nextLine());
-        }
-  
-        String[] arr = lines.toArray(new String[0]);
-       // System.out.println("get Thesaurus : "+Arrays.toString(arr));
-        
-        for(String ss : arr){
-            bacaThesaurus.add(ss.split(" "));
-        }
-        
-        //get expand term
-        
-        System.out.println(keyword);
-        
-        String kata[] = keyword.split(" ");
-        for(String w : kata){
-            expandKata.add(w);
-            System.out.println("expanda kata : " + w);
-            for(String[] ss : bacaThesaurus){
-                String kata1 = ss[0];
-                String kata2 = ss[1];
-                
-                if (w.equalsIgnoreCase(kata1)){
-                    expandKata.add(kata2);
-                }
-            }
-        }
-        
-        //expandKata = new ArrayList<String>(new LinkedHashSet<String>(expandKata));
-        String expandTerms = String.join(" ",expandKata); //ubah list jd string
-        return expandTerms;
-   }
+    
+    
 }
 
