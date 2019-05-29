@@ -155,6 +155,7 @@ public class PembobotanTFIDF {
         //setiap string isi array dokumen dicek tengan string isi list allTerm
         String data1 = termToCheck[0];
         String data2 = termToCheck[1];
+        System.out.println(data2);
         
         for (String s : totalterms) {
             //jika string a = string b

@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,6 +22,7 @@ import java.util.Scanner;
  */
 public class TextDetectionWithQE {
     private String[] termDocArray;
+    private double[] resultSimilarity;
     
     public void parseFilesU(String filePath) throws FileNotFoundException, IOException {
         File file = new File(filePath);
@@ -65,17 +67,39 @@ public class TextDetectionWithQE {
     }
     
     public void getCosineSimilarity(List <double[]> tfidfDocsVector, double[] tfidfQueryvectors) {
+        resultSimilarity = new double[tfidfDocsVector.size()];
+        CosineSimilarity cosine = new CosineSimilarity();
         
         for (int j = 0; j < tfidfDocsVector.size(); j++) {
             System.out.println("between " + "query" + " and " + j + "  =  "
-                + new CosineSimilarity().cosineSimilarity
+                + cosine.cosineSimilarity
                 (
                    tfidfQueryvectors, 
                    tfidfDocsVector.get(j)
                 )
             );
+            
+            resultSimilarity[j] = cosine.cosineSimilarity(tfidfQueryvectors, tfidfDocsVector.get(j));
         }
         
+    }
+    
+    public double maxSimilarity() {
+        double temp;
+        double max;
+        for (int i = 0; i < resultSimilarity.length-1; i++) {
+            for (int j = 0; j < resultSimilarity.length-1; j++) {
+                if(resultSimilarity[j]<resultSimilarity[j+1]) {
+                    temp = resultSimilarity[j];
+                    resultSimilarity[j] = resultSimilarity[j+1];
+                    resultSimilarity[j+1] = temp;
+                }
+            }
+        }
+        
+        max=(double) round(resultSimilarity[0]* 100.0, 2 );
+        
+        return max;
     }
     
     public String getExpansionTerm(String keyword) throws FileNotFoundException{
@@ -116,6 +140,13 @@ public class TextDetectionWithQE {
         //expandKata = new ArrayList<String>(new LinkedHashSet<String>(expandKata));
         String expandTerms = String.join(" ",expandKata); //ubah list jd string
         return expandTerms;
-   }
+    }
+    
+    private double round(double value, int numberOfDigitsAfterDecimalPoint) {
+        BigDecimal bigDecimal = new BigDecimal(value);
+        bigDecimal = bigDecimal.setScale(numberOfDigitsAfterDecimalPoint,
+                BigDecimal.ROUND_HALF_UP);
+        return bigDecimal.doubleValue();
+    }
 
 }
