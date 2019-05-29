@@ -53,40 +53,24 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Component id="jPanel4" max="32767" attributes="0"/>
+                      <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jPanel4" max="32767" attributes="0"/>
-                              <Component id="jPanel3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="dokPembanding1" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="dokCB2" min="-2" pref="180" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="dokPembanding2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="dokCB1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="dokCB2" min="-2" pref="172" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="similarityBtn" min="-2" pref="162" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-              </Group>
-              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="similarityBtn" min="-2" pref="162" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="338" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -105,18 +89,11 @@
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="dokPembanding1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="dokPembanding2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="dokCB1" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
                       <Component id="dokCB2" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="similarityBtn" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                  <Component id="similarityBtn" min="-2" pref="47" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -312,115 +289,6 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JComboBox" name="dokCB1">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="95">
-                <StringItem index="0" value="Dokumen A20%"/>
-                <StringItem index="1" value="Dokumen A40%"/>
-                <StringItem index="2" value="Dokumen A60%"/>
-                <StringItem index="3" value="Dokumen A80%"/>
-                <StringItem index="4" value="Dokumen A100%"/>
-                <StringItem index="5" value="Dokumen B20%"/>
-                <StringItem index="6" value="Dokumen B40%"/>
-                <StringItem index="7" value="Dokumen B60%"/>
-                <StringItem index="8" value="Dokumen B80%"/>
-                <StringItem index="9" value="Dokumen B100%"/>
-                <StringItem index="10" value="Dokumen C20%"/>
-                <StringItem index="11" value="Dokumen C40%"/>
-                <StringItem index="12" value="Dokumen C60%"/>
-                <StringItem index="13" value="Dokumen C80%"/>
-                <StringItem index="14" value="Dokumen C100%"/>
-                <StringItem index="15" value="Dokumen D20%"/>
-                <StringItem index="16" value="Dokumen D40%"/>
-                <StringItem index="17" value="Dokumen D60%"/>
-                <StringItem index="18" value="Dokumen D80%"/>
-                <StringItem index="19" value="Dokumen D100%"/>
-                <StringItem index="20" value="Dokumen E20%"/>
-                <StringItem index="21" value="Dokumen E40%"/>
-                <StringItem index="22" value="Dokumen E60%"/>
-                <StringItem index="23" value="Dokumen E80%"/>
-                <StringItem index="24" value="Dokumen E100%"/>
-                <StringItem index="25" value="Dokumen F20%"/>
-                <StringItem index="26" value="Dokumen F40%"/>
-                <StringItem index="27" value="Dokumen F60%"/>
-                <StringItem index="28" value="Dokumen F80%"/>
-                <StringItem index="29" value="Dokumen F100%"/>
-                <StringItem index="30" value="Dokumen G20%"/>
-                <StringItem index="31" value="Dokumen G40%"/>
-                <StringItem index="32" value="Dokumen G60%"/>
-                <StringItem index="33" value="Dokumen G80%"/>
-                <StringItem index="34" value="Dokumen G100%"/>
-                <StringItem index="35" value="Dokumen H20%"/>
-                <StringItem index="36" value="Dokumen H40%"/>
-                <StringItem index="37" value="Dokumen H60%"/>
-                <StringItem index="38" value="Dokumen H80%"/>
-                <StringItem index="39" value="Dokumen H100%"/>
-                <StringItem index="40" value="Dokumen I20%"/>
-                <StringItem index="41" value="Dokumen I40%"/>
-                <StringItem index="42" value="Dokumen I60%"/>
-                <StringItem index="43" value="Dokumen I80%"/>
-                <StringItem index="44" value="Dokumen I100%"/>
-                <StringItem index="45" value="Dokumen J20%"/>
-                <StringItem index="46" value="Dokumen J40%"/>
-                <StringItem index="47" value="Dokumen J60%"/>
-                <StringItem index="48" value="Dokumen J80%"/>
-                <StringItem index="49" value="Dokumen J100%"/>
-                <StringItem index="50" value="Dokumen K20%"/>
-                <StringItem index="51" value="Dokumen K40%"/>
-                <StringItem index="52" value="Dokumen K60%"/>
-                <StringItem index="53" value="Dokumen K80%"/>
-                <StringItem index="54" value="Dokumen K100%"/>
-                <StringItem index="55" value="Dokumen L20%"/>
-                <StringItem index="56" value="Dokumen L40%"/>
-                <StringItem index="57" value="Dokumen L60%"/>
-                <StringItem index="58" value="Dokumen L80%"/>
-                <StringItem index="59" value="Dokumen L100%"/>
-                <StringItem index="60" value="Dokumen M20%"/>
-                <StringItem index="61" value="Dokumen M40%"/>
-                <StringItem index="62" value="Dokumen M60%"/>
-                <StringItem index="63" value="Dokumen M80%"/>
-                <StringItem index="64" value="Dokumen M100%"/>
-                <StringItem index="65" value="Dokumen N20%"/>
-                <StringItem index="66" value="Dokumen N40%"/>
-                <StringItem index="67" value="Dokumen N60%"/>
-                <StringItem index="68" value="Dokumen N80%"/>
-                <StringItem index="69" value="Dokumen N100%"/>
-                <StringItem index="70" value="Dokumen O20%"/>
-                <StringItem index="71" value="Dokumen O40%"/>
-                <StringItem index="72" value="Dokumen O60%"/>
-                <StringItem index="73" value="Dokumen O80%"/>
-                <StringItem index="74" value="Dokumen O100%"/>
-                <StringItem index="75" value="Dokumen P20%"/>
-                <StringItem index="76" value="Dokumen P40%"/>
-                <StringItem index="77" value="Dokumen P60%"/>
-                <StringItem index="78" value="Dokumen P80%"/>
-                <StringItem index="79" value="Dokumen P100%"/>
-                <StringItem index="80" value="Dokumen Q20%"/>
-                <StringItem index="81" value="Dokumen Q40%"/>
-                <StringItem index="82" value="Dokumen Q60%"/>
-                <StringItem index="83" value="Dokumen Q80%"/>
-                <StringItem index="84" value="Dokumen Q100%"/>
-                <StringItem index="85" value="Dokumen R20%"/>
-                <StringItem index="86" value="Dokumen R40%"/>
-                <StringItem index="87" value="Dokumen R60%"/>
-                <StringItem index="88" value="Dokumen R80%"/>
-                <StringItem index="89" value="Dokumen R100%"/>
-                <StringItem index="90" value="Dokumen S20%"/>
-                <StringItem index="91" value="Dokumen S40%"/>
-                <StringItem index="92" value="Dokumen S60%"/>
-                <StringItem index="93" value="Dokumen S80%"/>
-                <StringItem index="94" value="Dokumen S100%"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dokCB1ActionPerformed"/>
-          </Events>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JButton" name="similarityBtn">
           <Properties>
             <Property name="text" type="java.lang.String" value="Similarity"/>
@@ -461,28 +329,6 @@
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="dokPembanding1">
-          <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="dokumenPembanding"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Dokumen Pembanding 1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dokPembanding1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="dokPembanding2">
-          <Properties>
-            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-              <ComponentRef name="dokumenPembanding"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Dokumen Pembanding 2"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dokPembanding2ActionPerformed"/>
-          </Events>
-        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel2">
@@ -497,38 +343,35 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane3" alignment="0" min="-2" pref="493" max="-2" attributes="0"/>
+                              <Component id="jScrollPane3" alignment="0" min="-2" pref="527" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="71" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="persentase1" min="-2" pref="135" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                      <Component id="execTime1" min="-2" pref="129" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jScrollPane4" min="-2" pref="495" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                  <Component id="persentase2" min="-2" pref="129" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="persentase2" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="execTime2" min="-2" pref="129" max="-2" attributes="0"/>
                               </Group>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="jScrollPane4" alignment="1" min="-2" pref="525" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="persentase1" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="execTime1" min="-2" pref="129" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <EmptySpace min="0" pref="33" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="71" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

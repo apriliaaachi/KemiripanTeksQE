@@ -44,9 +44,6 @@ public class MainForm extends javax.swing.JFrame {
         withoutQeRB.setEnabled(false);
         withQeRB.setEnabled(false);
         similarityBtn.setEnabled(false);
-        dokPembanding1.setEnabled(false);
-        dokPembanding2.setEnabled(false);
-        dokCB1.setEnabled(false);
         dokCB2.setEnabled(false);
     }
 
@@ -75,11 +72,8 @@ public class MainForm extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         withoutQeRB = new javax.swing.JRadioButton();
         withQeRB = new javax.swing.JRadioButton();
-        dokCB1 = new javax.swing.JComboBox<>();
         similarityBtn = new javax.swing.JButton();
         dokCB2 = new javax.swing.JComboBox<>();
-        dokPembanding1 = new javax.swing.JRadioButton();
-        dokPembanding2 = new javax.swing.JRadioButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -226,13 +220,6 @@ public class MainForm extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        dokCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dokumen A20%", "Dokumen A40%", "Dokumen A60%", "Dokumen A80%", "Dokumen A100%", "Dokumen B20%", "Dokumen B40%", "Dokumen B60%", "Dokumen B80%", "Dokumen B100%", "Dokumen C20%", "Dokumen C40%", "Dokumen C60%", "Dokumen C80%", "Dokumen C100%", "Dokumen D20%", "Dokumen D40%", "Dokumen D60%", "Dokumen D80%", "Dokumen D100%", "Dokumen E20%", "Dokumen E40%", "Dokumen E60%", "Dokumen E80%", "Dokumen E100%", "Dokumen F20%", "Dokumen F40%", "Dokumen F60%", "Dokumen F80%", "Dokumen F100%", "Dokumen G20%", "Dokumen G40%", "Dokumen G60%", "Dokumen G80%", "Dokumen G100%", "Dokumen H20%", "Dokumen H40%", "Dokumen H60%", "Dokumen H80%", "Dokumen H100%", "Dokumen I20%", "Dokumen I40%", "Dokumen I60%", "Dokumen I80%", "Dokumen I100%", "Dokumen J20%", "Dokumen J40%", "Dokumen J60%", "Dokumen J80%", "Dokumen J100%", "Dokumen K20%", "Dokumen K40%", "Dokumen K60%", "Dokumen K80%", "Dokumen K100%", "Dokumen L20%", "Dokumen L40%", "Dokumen L60%", "Dokumen L80%", "Dokumen L100%", "Dokumen M20%", "Dokumen M40%", "Dokumen M60%", "Dokumen M80%", "Dokumen M100%", "Dokumen N20%", "Dokumen N40%", "Dokumen N60%", "Dokumen N80%", "Dokumen N100%", "Dokumen O20%", "Dokumen O40%", "Dokumen O60%", "Dokumen O80%", "Dokumen O100%", "Dokumen P20%", "Dokumen P40%", "Dokumen P60%", "Dokumen P80%", "Dokumen P100%", "Dokumen Q20%", "Dokumen Q40%", "Dokumen Q60%", "Dokumen Q80%", "Dokumen Q100%", "Dokumen R20%", "Dokumen R40%", "Dokumen R60%", "Dokumen R80%", "Dokumen R100%", "Dokumen S20%", "Dokumen S40%", "Dokumen S60%", "Dokumen S80%", "Dokumen S100%" }));
-        dokCB1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dokCB1ActionPerformed(evt);
-            }
-        });
-
         similarityBtn.setText("Similarity");
         similarityBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,22 +229,6 @@ public class MainForm extends javax.swing.JFrame {
 
         dokCB2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dokumen A20%", "Dokumen A50%", "Dokumen A100%", "Dokumen B20%", "Dokumen B50%", "Dokumen B100%", "Dokumen C20%", "Dokumen C50%", "Dokumen C100%", "Dokumen D20%", "Dokumen D50%", "Dokumen D100%", "Dokumen E20%", "Dokumen E50%", "Dokumen E100%", "Dokumen F20%", "Dokumen F50%", "Dokumen F100%", "Dokumen G20%", "Dokumen G50%", "Dokumen G100%" }));
 
-        dokumenPembanding.add(dokPembanding1);
-        dokPembanding1.setText("Dokumen Pembanding 1");
-        dokPembanding1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dokPembanding1ActionPerformed(evt);
-            }
-        });
-
-        dokumenPembanding.add(dokPembanding2);
-        dokPembanding2.setText("Dokumen Pembanding 2");
-        dokPembanding2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dokPembanding2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -265,32 +236,20 @@ public class MainForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(dokPembanding1)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(dokCB2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(dokPembanding2)
-                        .addGap(43, 43, 43))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(dokCB1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(dokCB2, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(69, 69, 69))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(similarityBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(338, 338, 338))
+                        .addComponent(similarityBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,16 +266,10 @@ public class MainForm extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dokPembanding1)
-                    .addComponent(dokPembanding2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dokCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dokCB2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50)
-                .addComponent(similarityBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dokCB2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(similarityBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -353,31 +306,29 @@ public class MainForm extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(71, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel9)
-                                    .addGap(31, 31, 31)
-                                    .addComponent(persentase1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel6)
-                                    .addGap(42, 42, 42)
-                                    .addComponent(execTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 495, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(30, 30, 30)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel10)
-                                .addGap(32, 32, 32)
-                                .addComponent(persentase2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(73, 73, 73)
-                                .addComponent(jLabel11)
                                 .addGap(18, 18, 18)
-                                .addComponent(execTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 33, Short.MAX_VALUE))))
+                                .addComponent(persentase2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(91, 91, 91)
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(execTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                                    .addComponent(jLabel9)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(persentase1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(91, 91, 91)
+                                    .addComponent(jLabel6)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(execTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 71, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -475,26 +426,18 @@ public class MainForm extends javax.swing.JFrame {
 
     private void withoutQeRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withoutQeRBActionPerformed
         // TODO add your handling code here:
-        dokPembanding1.setEnabled(true);
-        dokPembanding2.setEnabled(true);
+        dokCB2.setEnabled(true);
+        similarityBtn.setEnabled(true);
     }//GEN-LAST:event_withoutQeRBActionPerformed
-
-    private void dokCB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dokCB1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dokCB1ActionPerformed
     
     private void doProsesWithQE() throws IOException {
         double execTime = 0.0;
         String data, path = ""; 
         
         double startTime = System.currentTimeMillis();
-        if(dokPembanding1.isSelected()) {
-            data = dokCB1.getSelectedItem().toString();
-            path = "dataUji/"+data+".txt";
-        } else if (dokPembanding2.isSelected()) {
-            data = dokCB2.getSelectedItem().toString();
-            path = "dokumen/"+data+".txt";
-        }
+        data = dokCB2.getSelectedItem().toString();
+        path = "dokumen/"+data+".txt";
+
         
         System.out.println(path);
         
@@ -508,8 +451,9 @@ public class MainForm extends javax.swing.JFrame {
         
         String join = String.join(" ", tdq.getTermDocArray());
         execTime += System.currentTimeMillis() - startTime;
+        double persentase = tdq.maxSimilarity();
         
-        persentase2.setText("" + tdq.maxSimilarity());
+        persentase1.setText("" + persentase);
         result2.setText("" + join);
         execTime2.setText("" + execTime);
         
@@ -520,14 +464,8 @@ public class MainForm extends javax.swing.JFrame {
         String data, path = ""; 
         
         double startTime = System.currentTimeMillis();
-        if(dokPembanding1.isSelected()) {
-            data = dokCB1.getSelectedItem().toString();
-            path = "dataUji/"+data+".txt";
-        } else if (dokPembanding2.isSelected()) {
-            data = dokCB2.getSelectedItem().toString();
-            path = "dokumen/"+data+".txt";
-        }
-        
+        data = dokCB2.getSelectedItem().toString();
+        path = "dokumen/"+data+".txt";
         
         System.out.println(path);
         
@@ -540,8 +478,9 @@ public class MainForm extends javax.swing.JFrame {
         
         String join = String.join(" ", td.getTermDocArray());
         execTime += System.currentTimeMillis() - startTime;
+        double persentase = td.maxSimilarity();
         
-        persentase1.setText("" + td.maxSimilarity());
+        persentase1.setText("" + persentase);
         result1.setText("" + join);
         execTime1.setText("" + execTime);
         
@@ -567,25 +506,11 @@ public class MainForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_similarityBtnActionPerformed
 
-    private void dokPembanding2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dokPembanding2ActionPerformed
-        // TODO add your handling code here:
-        dokCB2.setEnabled(true);
-        dokCB1.setEnabled(false);
-        similarityBtn.setEnabled(true);
-    }//GEN-LAST:event_dokPembanding2ActionPerformed
-
     private void withQeRBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_withQeRBActionPerformed
         // TODO add your handling code here:
-        dokPembanding1.setEnabled(true);
-        dokPembanding2.setEnabled(true);
-    }//GEN-LAST:event_withQeRBActionPerformed
-
-    private void dokPembanding1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dokPembanding1ActionPerformed
-        // TODO add your handling code here:
-        dokCB1.setEnabled(true);
-        dokCB2.setEnabled(false);
+        dokCB2.setEnabled(true);
         similarityBtn.setEnabled(true);
-    }//GEN-LAST:event_dokPembanding1ActionPerformed
+    }//GEN-LAST:event_withQeRBActionPerformed
 
     private void createBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createBtnActionPerformed
         // TODO add your handling code here:
@@ -648,10 +573,7 @@ public class MainForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createBtn;
-    private javax.swing.JComboBox<String> dokCB1;
     private javax.swing.JComboBox<String> dokCB2;
-    private javax.swing.JRadioButton dokPembanding1;
-    private javax.swing.JRadioButton dokPembanding2;
     private javax.swing.ButtonGroup dokumenPembanding;
     private javax.swing.JTextField execTime1;
     private javax.swing.JTextField execTime2;
