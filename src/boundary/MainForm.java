@@ -12,6 +12,7 @@ import controller.TextDetectionWithoutQE;
 import controller.Thesaurus;
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -83,12 +84,18 @@ public class MainForm extends javax.swing.JFrame {
         result2 = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        persentase1 = new javax.swing.JTextField();
+        namaDokumen1 = new javax.swing.JTextField();
         execTime1 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         persentase2 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         execTime2 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        persentase1 = new javax.swing.JTextField();
+        namaDokumen2 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -120,7 +127,7 @@ public class MainForm extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(folderPath, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(loadBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addComponent(loadBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
                 .addGap(25, 25, 25))
         );
         jPanel3Layout.setVerticalGroup(
@@ -289,11 +296,25 @@ public class MainForm extends javax.swing.JFrame {
 
         jLabel6.setText("Execution Time");
 
-        jLabel9.setText("Persentase");
+        jLabel9.setText("Dok");
 
         jLabel10.setText("Persentase");
 
         jLabel11.setText("Execution Time");
+
+        jLabel12.setText("%");
+
+        jLabel13.setText("%");
+
+        jLabel14.setText("Persentase");
+
+        persentase1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                persentase1ActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setText("Dok");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -304,31 +325,45 @@ public class MainForm extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(71, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel10)
+                                .addGap(9, 9, 9)
+                                .addComponent(persentase2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel13)
                                 .addGap(18, 18, 18)
-                                .addComponent(persentase2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(91, 91, 91)
+                                .addComponent(jLabel15)
+                                .addGap(5, 5, 5)
+                                .addComponent(namaDokumen2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
                                 .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(execTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(execTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 525, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel9)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(persentase1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(91, 91, 91)
-                                    .addComponent(jLabel6)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(execTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 71, Short.MAX_VALUE))))
+                                    .addGap(3, 3, 3)
+                                    .addComponent(jLabel14)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(persentase1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel12))))
+                        .addGap(0, 79, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(namaDokumen1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(execTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel7)
+                                .addComponent(jLabel8)
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 527, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(79, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -339,10 +374,13 @@ public class MainForm extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(persentase1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(namaDokumen1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9)
                     .addComponent(jLabel6)
-                    .addComponent(execTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(execTime1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel14)
+                    .addComponent(persentase1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -352,7 +390,10 @@ public class MainForm extends javax.swing.JFrame {
                     .addComponent(persentase2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
                     .addComponent(jLabel11)
-                    .addComponent(execTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(execTime2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel13)
+                    .addComponent(namaDokumen2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
@@ -447,16 +488,48 @@ public class MainForm extends javax.swing.JFrame {
         tfidf.tfidfQueryCalculator(tdq.getTermDocArray(), idf);
 
         
-        tdq.getCosineSimilarity(tfidfDocsVector, tfidf.getTfidfQueryVector());
+        tdq.resultCosineSimilarity(tfidfDocsVector, tfidf.getTfidfQueryVector());
         
         String join = String.join(" ", tdq.getTermDocArray());
         execTime += System.currentTimeMillis() - startTime;
+        
+        double[] dokumen = tdq.getCosineSimilarity();
         double persentase = tdq.maxSimilarity();
         
-        persentase1.setText("" + persentase);
+        int indeksDokumen = dokumenSimilarity(dokumen, persentase) + 1;
+        
+        char dok = namaDokumen(indeksDokumen);
+        
+        System.out.println("nama dokumen " + indeksDokumen);
+        
+        persentase2.setText("" + round(persentase* 100.0, 2 ));
+        namaDokumen2.setText("" + dok);
         result2.setText("" + join);
         execTime2.setText("" + execTime);
         
+    }
+    
+    private double round(double value, int numberOfDigitsAfterDecimalPoint) {
+        BigDecimal bigDecimal = new BigDecimal(value);
+        bigDecimal = bigDecimal.setScale(numberOfDigitsAfterDecimalPoint,
+                BigDecimal.ROUND_HALF_UP);
+        return bigDecimal.doubleValue();
+    }
+    
+    public int dokumenSimilarity(double[] resultSimilarity, double persentase) {
+        int namaDokumen = 0;
+        
+        for (int i = 0; i < resultSimilarity.length; i++) {
+            System.out.println(resultSimilarity[i]);
+        }
+        
+        for (int i = 0; i < resultSimilarity.length; i++) {
+            if (persentase == resultSimilarity[i]) {
+                namaDokumen = i; 
+            }
+        }
+        
+        return namaDokumen;
     }
     
     private void doProsesWithoutQE() throws IOException {
@@ -473,18 +546,46 @@ public class MainForm extends javax.swing.JFrame {
         td.parseFilesU(path);
         tfidf = new PembobotanTFIDF(allTerms);
         tfidf.tfidfQueryCalculator(td.getTermDocArray(), idf);
-        td.getCosineSimilarity(tfidfDocsVector, tfidf.getTfidfQueryVector());
+        td.resultCosineSimilarity(tfidfDocsVector, tfidf.getTfidfQueryVector());
         
         
         String join = String.join(" ", td.getTermDocArray());
         execTime += System.currentTimeMillis() - startTime;
+        double[] dokumen = td.getCosineSimilarity();
         double persentase = td.maxSimilarity();
+        int indeksDokumen = dokumenSimilarity(dokumen, persentase) + 1;
         
-        persentase1.setText("" + persentase);
+        char dok = namaDokumen(indeksDokumen);
+        
+        System.out.println("nama dokumen" + dok);
+        
+        persentase1.setText("" + round(persentase* 100.0, 2 ));
+        namaDokumen1.setText("" + dok);
         result1.setText("" + join);
         execTime1.setText("" + execTime);
         
         
+    }
+    
+    private char namaDokumen (int dok) {
+        char namaDokumen = ' ';
+        if (dok == 1) {
+            namaDokumen = 'A';
+        } else if (dok == 2) {
+            namaDokumen = 'B';
+        } else if (dok == 3) {
+            namaDokumen = 'C';
+        } else if (dok == 4) {
+            namaDokumen = 'D';
+        } else if (dok == 5) {
+            namaDokumen = 'E';
+        } else if (dok == 6) {
+            namaDokumen = 'F';
+        } else if (dok == 7) {
+            namaDokumen = 'G';
+        }
+        
+        return namaDokumen;
     }
     
     private void similarityBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_similarityBtnActionPerformed
@@ -536,6 +637,10 @@ public class MainForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_sizeCBActionPerformed
 
+    private void persentase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_persentase1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_persentase1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -581,6 +686,10 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -596,6 +705,8 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private java.awt.Button loadBtn;
+    private javax.swing.JTextField namaDokumen1;
+    private javax.swing.JTextField namaDokumen2;
     private javax.swing.JTextField persentase1;
     private javax.swing.JTextField persentase2;
     private javax.swing.JTextArea result1;

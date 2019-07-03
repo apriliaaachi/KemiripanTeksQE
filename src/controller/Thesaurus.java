@@ -34,7 +34,7 @@ public class Thesaurus {
     private List <Double> clusterWeight = new ArrayList<>();
     private List <String[]> validPairTerm = new ArrayList<>();
     private List <String> expandTerm = new ArrayList<>();
-    private String[] dok = new String[120];
+    //private String[] dok = new String[120];
     private PembobotanTFIDF bobot = new PembobotanTFIDF();
     
     
@@ -218,7 +218,7 @@ public class Thesaurus {
         System.out.println(validPairTerm.size());   
             
         //Tulis hasil thesaurus ke file .txt
-        FileWriter fw = new FileWriter("hasilThesaurusSize2.txt"); 
+        FileWriter fw = new FileWriter("hasilThesaurus.txt"); 
         for(String[] str: validPairTerm) {
             for (int i = 0; i < str.length; i++) {
                 fw.write(str[i] + " ");

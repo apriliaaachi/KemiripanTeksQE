@@ -38,18 +38,18 @@ public class PembobotanTFIDF {
         double tfidf; //term requency inverse document frequency  
         
         
-        for (int i = 0; i < termsDocsArray.size(); i++) {
-            System.out.println(termsDocsArray.get(i).length);
-            for (int j = 0; j < termsDocsArray.get(i).length; j++) {
-                System.out.println(termsDocsArray.get(i)[j]);
-            }
-        }
+//        for (int i = 0; i < termsDocsArray.size(); i++) {
+//            System.out.println(termsDocsArray.get(i).length);
+//            for (int j = 0; j < termsDocsArray.get(i).length; j++) {
+//                System.out.println(termsDocsArray.get(i)[j]);
+//            }
+//        }
         
         for (String[] docTermsArray : termsDocsArray) {
             double[] tfidfvectors = new double[allTerms.size()];
             int count = 0;
             
-            System.out.println("terms" + allTerms.size());
+            //System.out.println("terms" + allTerms.size());
             for (String terms : allTerms) {
                 
                 tf = tfCalculator(docTermsArray, terms);
@@ -67,14 +67,14 @@ public class PembobotanTFIDF {
  
         }
         
-        for (int i = 0; i < tfidfDocsVector.size(); i++) {
-            System.out.println(tfidfDocsVector.get(i).length);
-            double[] sum = tfidfDocsVector.get(i);
-
-            for (int j = 0; j < sum.length; j++) {
-                //System.out.print(sum[j]);
-            }
-        }
+//        for (int i = 0; i < tfidfDocsVector.size(); i++) {
+//            System.out.println(tfidfDocsVector.get(i).length);
+//            double[] sum = tfidfDocsVector.get(i);
+//
+//            for (int j = 0; j < sum.length; j++) {
+//                //System.out.print(sum[j]);
+//            }
+//        }
   
     }
     
@@ -155,7 +155,7 @@ public class PembobotanTFIDF {
         //setiap string isi array dokumen dicek tengan string isi list allTerm
         String data1 = termToCheck[0];
         String data2 = termToCheck[1];
-        System.out.println(data2);
+        System.out.println(data1 + " " +data2);
         
         for (String s : totalterms) {
             //jika string a = string b
